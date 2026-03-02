@@ -3,28 +3,37 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CTO at TechCorp",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+    name: "Jessica M.",
+    role: "Real Estate Agent, Florida",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jessica",
     content:
-      "This platform transformed how we integrate AI into our products. The API is incredibly easy to use and the performance is outstanding.",
+      "MLS Writer saves me at least two hours per listing. I put in the address and walk away — the copy comes back compliant, professional, and ready to post.",
     rating: 5,
+    productLabel: "MLS Writer",
+    productHref: "https://mlswriter.app",
+    productColor: "text-purple-600 dark:text-purple-400",
   },
   {
-    name: "Marcus Rodriguez",
-    role: "Founder at StartupXYZ",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus",
+    name: "Derek T.",
+    role: "Broker, Texas",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Derek",
     content:
-      "We've tried several AI platforms, but this one stands out for its reliability and developer experience. Highly recommended!",
+      "The Fair Housing compliance piece alone is worth it. I used to spend 20 minutes carefully reviewing every listing. Now I trust the output and move on.",
     rating: 5,
+    productLabel: "MLS Writer",
+    productHref: "https://mlswriter.app",
+    productColor: "text-purple-600 dark:text-purple-400",
   },
   {
-    name: "Emily Watson",
-    role: "Product Manager at InnovateLabs",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily",
+    name: "Anika R.",
+    role: "First-time investor",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Anika",
     content:
-      "The support team is fantastic and the documentation is comprehensive. We were able to integrate AI features in days, not weeks.",
+      "Pacalaca finally made investing click for me. Every other app felt like it was built for someone who already knew what they were doing. This one felt like it was built for me.",
     rating: 5,
+    productLabel: "Pacalaca",
+    productHref: "https://pacalaca.app",
+    productColor: "text-blue-600 dark:text-blue-400",
   },
 ];
 
@@ -42,7 +51,7 @@ export function Testimonials() {
           >
             Loved by{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              developers
+              real users
             </span>
           </motion.h2>
           <motion.p
@@ -52,7 +61,7 @@ export function Testimonials() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            See what our customers are saying about us
+            Agents, brokers, and everyday investors trust our products
           </motion.p>
         </div>
 
@@ -64,7 +73,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="testimonial-card p-6 rounded-2xl border bg-card"
+              className="testimonial-card p-6 rounded-2xl border bg-card flex flex-col"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -74,21 +83,31 @@ export function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-6 flex-1">
                 "{testimonial.content}"
               </p>
-              <div className="flex items-center gap-3">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="h-12 w-12 rounded-full"
-                />
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
-                  </p>
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="h-12 w-12 rounded-full"
+                  />
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
+                  </div>
                 </div>
+                <a
+                  href={testimonial.productHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-xs font-semibold shrink-0 hover:underline ${testimonial.productColor}`}
+                >
+                  {testimonial.productLabel} →
+                </a>
               </div>
             </motion.div>
           ))}

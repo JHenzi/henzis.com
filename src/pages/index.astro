@@ -2,6 +2,7 @@
 import Layout from '../layouts/main.astro';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
+import { WSJF } from '@/components/WSJF';
 import { Pricing } from '@/components/Pricing';
 import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
@@ -10,6 +11,7 @@ import { FAQ } from '@/components/FAQ';
 <Layout>
 	<Hero client:load />
 	<Features client:load />
+	<WSJF client:load />
 	<Testimonials client:load />
 	<Pricing client:load />
 	<FAQ client:load />

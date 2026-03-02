@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/main.astro';
-import { motion } from 'framer-motion';
-import { Users, Target, Zap, Heart } from 'lucide-react';
+import { Target, Zap, Heart } from 'lucide-react';
 ---
 
-<Layout title="About Us - GenAI">
+<Layout title="About - Henzi's Services LLC">
 	<section class="py-20 md:py-32">
 		<div class="container mx-auto px-4">
 			<div class="max-w-4xl mx-auto">
@@ -12,40 +11,71 @@ import { Users, Target, Zap, Heart } from 'lucide-react';
 					<h1 class="text-4xl md:text-6xl font-bold">
 						About{" "}
 						<span class="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-							GenAI
+							Henzi's Services
 						</span>
 					</h1>
 					<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-						We're on a mission to democratize AI and make it accessible to everyone
+						We build AI-powered tools for real people — not just tech teams
 					</p>
+				</div>
+
+				<!-- Founder Section -->
+				<div class="flex flex-col md:flex-row items-center gap-10 mb-16 p-8 rounded-2xl border bg-card">
+					<img
+						src="/Henzi.png"
+						alt="Joe Henzi"
+						class="w-48 h-48 rounded-full object-cover object-top shrink-0 shadow-lg"
+					/>
+					<div>
+						<h2 class="text-2xl font-bold mb-1">Joe Henzi</h2>
+						<p class="text-sm text-muted-foreground mb-4">
+							Founder, Henzi's Services LLC &bull;
+							<a href="https://henzi.org" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors">Henzi.org</a>
+							&bull; Henzi Foundation
+						</p>
+						<p class="text-muted-foreground mb-4">
+							Joe is a Salesforce professional with over 10 years of experience building software in the enterprise. He's spent his career solving real business problems with technology — and was among the first 0.1% of ChatGPT users when AI went mainstream, recognizing immediately what it could mean for the tools people use every day.
+						</p>
+						<p class="text-muted-foreground mb-4">
+							That excitement led directly to
+							<a href="https://mlswriter.app" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-foreground transition-colors">MLS Writer</a>,
+							<a href="https://pacalaca.app" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-foreground transition-colors">Pacalaca</a>,
+							and <a href="https://vote.henzi.org" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-foreground transition-colors">VOTE</a> — three tools built on a simple belief: make something genuinely useful, keep it accessible, and get out of the user's way.
+						</p>
+						<p class="text-muted-foreground">
+							Through <a href="https://henzi.org" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-foreground transition-colors">Henzi.org</a> and the Henzi Foundation, Joe has extended that same mission — creating software and initiatives that put real people first.
+						</p>
+					</div>
 				</div>
 
 				<!-- Story Section -->
 				<div class="prose prose-lg dark:prose-invert mx-auto mb-16">
 					<h2>Our Story</h2>
 					<p>
-						Founded in 2024, GenAI emerged from a simple observation: while artificial intelligence
-						was advancing rapidly, it remained inaccessible to most developers and businesses. We set
-						out to change that.
+						Henzi's Services LLC was founded with a straightforward belief: the best software solves a real problem for a real person.
+						Too much technology is built for people who already know how to use technology. We build for everyone else.
 					</p>
 					<p>
-						Our team of AI researchers, engineers, and product designers came together with a shared
-						vision: to build a platform that makes cutting-edge AI technology as easy to use as
-						sending an email. Today, we're proud to serve thousands of developers and businesses
-						worldwide.
+						Our first product, MLS Writer, came from watching real estate agents spend hours writing listing copy — tedious,
+						repetitive work that an AI can do in seconds while keeping it Fair Housing compliant. Pacalaca came from watching
+						people avoid investing entirely because every tool assumed they already understood it. And VOTE came from watching
+						engineering teams burn cycles in prioritization debates that math should settle in minutes.
+					</p>
+					<p>
+						We distribute all three products under Henzi's Services LLC. As we grow, we'll keep applying the same principle:
+						find a workflow that's harder than it needs to be, and fix it.
 					</p>
 				</div>
 
-				<!-- Values Grid -->
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+				<!-- Mission & Goals -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 					<div class="p-6 rounded-2xl border bg-card">
 						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 mb-4">
 							<Target class="h-6 w-6 text-white" />
 						</div>
 						<h3 class="text-xl font-semibold mb-2">Our Mission</h3>
 						<p class="text-muted-foreground">
-							To empower developers and businesses with accessible, powerful AI tools that
-							drive innovation and create value.
+							Provide material support for the development of software built for humans — tools that reduce friction and create real value for real people.
 						</p>
 					</div>
 
@@ -53,21 +83,9 @@ import { Users, Target, Zap, Heart } from 'lucide-react';
 						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-4">
 							<Zap class="h-6 w-6 text-white" />
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+						<h3 class="text-xl font-semibold mb-2">Our Approach</h3>
 						<p class="text-muted-foreground">
-							A world where AI is a force for good, accessible to all, and used to solve
-							humanity's greatest challenges.
-						</p>
-					</div>
-
-					<div class="p-6 rounded-2xl border bg-card">
-						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 mb-4">
-							<Users class="h-6 w-6 text-white" />
-						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Team</h3>
-						<p class="text-muted-foreground">
-							A diverse group of AI experts, engineers, and innovators from leading tech
-							companies and research institutions.
+							Ship focused tools that do one thing well. No bloat, no steep learning curves — just tools that work. Excess income funds the Henzi Foundation.
 						</p>
 					</div>
 
@@ -77,42 +95,106 @@ import { Users, Target, Zap, Heart } from 'lucide-react';
 						</div>
 						<h3 class="text-xl font-semibold mb-2">Our Values</h3>
 						<p class="text-muted-foreground">
-							Transparency, ethics, innovation, and customer success guide everything
-							we do at GenAI.
+							Build for the user, not the pitch deck. Accessible by design. Honest about what our products do and don't do.
 						</p>
 					</div>
 				</div>
 
-				<!-- Stats -->
-				<div class="grid grid-cols-3 gap-8 py-12 border-y">
-					<div class="text-center">
-						<div class="text-3xl md:text-4xl font-bold mb-2">50K+</div>
-						<p class="text-sm text-muted-foreground">Active Users</p>
+				<!-- Products -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+					<a href="https://mlswriter.app" target="_blank" rel="noopener noreferrer"
+						class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+						<h3 class="text-xl font-semibold mb-2 text-purple-600 dark:text-purple-400">MLS Writer →</h3>
+						<p class="text-muted-foreground text-sm">
+							AI-generated MLS listings, social media posts, and blog content — all Fair Housing compliant — in seconds.
+						</p>
+					</a>
+					<a href="https://pacalaca.app" target="_blank" rel="noopener noreferrer"
+						class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+						<h3 class="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">Pacalaca →</h3>
+						<p class="text-muted-foreground text-sm">
+							Investing for humans. A platform built to make investing understandable and accessible to everyday people.
+						</p>
+					</a>
+					<a href="https://vote.henzi.org" target="_blank" rel="noopener noreferrer"
+						class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+						<h3 class="text-xl font-semibold mb-2 text-emerald-600 dark:text-emerald-400">VOTE →</h3>
+						<p class="text-muted-foreground text-sm">
+							WSJF-powered prioritization for engineering teams. Decide what to do next — without overthinking.
+						</p>
+					</a>
+				</div>
+
+				<!-- Henzi Foundation Free Projects -->
+				<div class="mb-16">
+					<div class="text-center mb-10">
+						<h2 class="text-3xl font-bold mb-3">Gifts from the Henzi Foundation</h2>
+						<p class="text-muted-foreground max-w-2xl mx-auto">
+							Not every project needs a price tag. These are free experiments and art projects — given away because building them was worthwhile in itself.
+						</p>
 					</div>
-					<div class="text-center">
-						<div class="text-3xl md:text-4xl font-bold mb-2">10M+</div>
-						<p class="text-sm text-muted-foreground">API Requests/Day</p>
-					</div>
-					<div class="text-center">
-						<div class="text-3xl md:text-4xl font-bold mb-2">99.9%</div>
-						<p class="text-sm text-muted-foreground">Uptime SLA</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<a href="https://henzi.org/news-pulse-live-art-application.html" target="_blank" rel="noopener noreferrer"
+							class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							<div class="flex items-start gap-4">
+								<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-500 shrink-0">
+									<svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+										<circle cx="12" cy="12" r="3" fill="currentColor" />
+										<circle cx="5" cy="8" r="2" fill="currentColor" opacity="0.6" />
+										<circle cx="19" cy="6" r="2.5" fill="currentColor" opacity="0.5" />
+										<circle cx="7" cy="17" r="1.5" fill="currentColor" opacity="0.4" />
+										<circle cx="18" cy="17" r="2" fill="currentColor" opacity="0.7" />
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold mb-1 text-violet-600 dark:text-violet-400 group-hover:underline">Pulsefield →</h3>
+									<p class="text-muted-foreground text-sm">
+										A real-time visualization that transforms global headlines into a living work of digital art. News topics cluster as pulsing 3D orbs — color-coded by sentiment, sized by volume, alive with the moment.
+									</p>
+									<p class="text-xs text-muted-foreground mt-2">pulse.henzi.org</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://henzi.org/robot-diary.html" target="_blank" rel="noopener noreferrer"
+							class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							<div class="flex items-start gap-4">
+								<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 shrink-0">
+									<svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+										<rect x="7" y="3" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" />
+										<circle cx="10" cy="6.5" r="1" fill="currentColor" />
+										<circle cx="14" cy="6.5" r="1" fill="currentColor" />
+										<path d="M10 9h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+										<path d="M12 11v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+										<rect x="5" y="13" width="14" height="7" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" />
+										<path d="M8 17h8M8 15.5h5" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6" />
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold mb-1 text-amber-600 dark:text-amber-400 group-hover:underline">The Personal Diary of B3N-T5-MNT →</h3>
+									<p class="text-muted-foreground text-sm">
+										An automated art project: a maintenance robot in New Orleans observes the world through a window and records its thoughts. Each entry weaves in real-time weather, news, moon phases, and the robot's own accumulated memory.
+									</p>
+									<p class="text-xs text-muted-foreground mt-2">robot.henzi.org</p>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 
-				<!-- CTA -->
-				<div class="text-center mt-16">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4">Join Our Journey</h2>
-					<p class="text-muted-foreground mb-6">
-						We're always looking for talented people to join our team
+				<!-- Henzi Foundation & The Frankie Fund -->
+				<div class="p-8 rounded-2xl border bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 mb-8">
+					<h2 class="text-2xl md:text-3xl font-bold mb-4">The Henzi Foundation &amp; The Frankie Fund</h2>
+					<p class="text-muted-foreground mb-4 max-w-2xl">
+						Henzi's Services LLC exists in part to generate the resources needed to sustain and expand the Henzi Foundation's work.
+						Excess income from our products is dedicated to the Foundation — specifically the <strong>Frankie Fund</strong>, our primary charitable vehicle.
 					</p>
-					<div class="flex flex-col sm:flex-row gap-4 justify-center">
-						<a href="#" class="inline-flex items-center justify-center h-10 px-6 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors">
-							View Open Positions
-						</a>
-						<a href="/contact" class="inline-flex items-center justify-center h-10 px-6 rounded-md border bg-background hover:bg-accent hover:text-accent-foreground transition-colors">
-							Get in Touch
-						</a>
-					</div>
+					<p class="text-muted-foreground mb-6 max-w-2xl">
+						As we grow, our hope is to expand into areas that matter most to us: <strong>Child Safety</strong> and the <strong>Environment</strong> — reduce, reuse, recycle, save the planet, and help defer global warming. The work we do building useful software today is the foundation for the impact we want to have tomorrow.
+					</p>
+					<a href="https://henzi.org" target="_blank" rel="noopener noreferrer"
+						class="inline-flex items-center justify-center h-10 px-6 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors">
+						Visit Henzi.org
+					</a>
 				</div>
 			</div>
 		</div>

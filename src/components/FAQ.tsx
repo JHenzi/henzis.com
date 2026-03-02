@@ -8,34 +8,39 @@ import {
 
 const faqs = [
   {
-    question: "What AI models do you support?",
+    question: "What is MLS Writer?",
     answer:
-      "We support a wide range of state-of-the-art AI models including GPT-4, Claude, Llama, and custom fine-tuned models. Our platform is model-agnostic and continuously updated with the latest releases.",
+      "MLS Writer is an AI-powered tool that generates professional MLS listings in seconds. You provide a property address, and it pulls data from real estate databases, analyzes it, and produces multiple formats of marketing copy — including the MLS listing, Facebook posts, tweets, and blog content — all checked for Fair Housing Act compliance. Try it at mlswriter.app.",
   },
   {
-    question: "How is pricing calculated?",
+    question: "What is Pacalaca?",
     answer:
-      "Pricing is based on the number of API requests and the complexity of the AI models used. We offer transparent, pay-as-you-go pricing with no hidden fees. You can upgrade or downgrade your plan at any time.",
+      "Pacalaca is an investing platform built for everyday people, not Wall Street professionals. The tagline says it all: \"Investing for Humans.\" It strips away the jargon and complexity to make investing approachable and understandable for anyone, regardless of experience. Visit pacalaca.app to get started free.",
   },
   {
-    question: "Is my data secure?",
+    question: "What is VOTE?",
     answer:
-      "Absolutely. We use bank-level encryption (AES-256) for data at rest and in transit. We're SOC 2 Type II certified and compliant with GDPR, HIPAA, and other major data protection regulations. Your data is never used to train models without explicit consent.",
+      "VOTE is a team prioritization tool at vote.henzi.org that helps enterprise software teams decide what to build next using WSJF (Weighted Shortest Job First) scoring. Teams vote in real time, the math runs automatically, and the highest-priority work rises to the top — without politics or gut instinct.",
   },
   {
-    question: "Can I use this for commercial projects?",
+    question: "What is WSJF and why does it matter?",
     answer:
-      "Yes! All our plans, including the free tier, can be used for commercial projects. We encourage you to build and ship products using our platform. Enterprise plans offer additional features for large-scale deployments.",
+      "WSJF stands for Weighted Shortest Job First — a prioritization framework from the Scaled Agile Framework (SAFe). The formula is: WSJF = Cost of Delay ÷ Job Size. Cost of Delay is the sum of Business Value, Time Criticality, and Risk Reduction / Opportunity Enablement. The insight is powerful: short jobs with high cost of delay should always be done before long jobs with low cost of delay. WSJF removes subjectivity from backlog prioritization and ensures the highest-leverage work gets done first. It's the best way to run an enterprise software delivery stream.",
   },
   {
-    question: "What kind of support do you offer?",
+    question: "How does VOTE implement WSJF?",
     answer:
-      "Free plans include community support and comprehensive documentation. Pro plans get priority email support with 24-hour response times. Enterprise customers receive 24/7 dedicated support with a dedicated account manager and custom SLAs.",
+      "VOTE guides your team through scoring each work item on the four WSJF dimensions — Business Value, Time Criticality, Risk Reduction / Opportunity Enablement, and Job Size — using relative sizing (Fibonacci sequence: 1, 2, 3, 5, 8, 13, 20). Everyone votes anonymously, results are revealed simultaneously, the team discusses outliers, and VOTE calculates the final WSJF score. Your backlog is automatically ranked by priority.",
   },
   {
-    question: "Do you offer a free trial?",
+    question: "What does Fair Housing compliant mean?",
     answer:
-      "Yes! We offer a generous free tier that includes 1,000 API requests per month. Pro and Enterprise plans come with a 14-day free trial with no credit card required. You can cancel anytime.",
+      "The Fair Housing Act prohibits language in listings that discriminates based on race, color, national origin, religion, sex, familial status, or disability. MLS Writer automatically reviews generated content against these standards so every listing you produce is compliant before it goes out.",
+  },
+  {
+    question: "Who is Henzi's Services LLC?",
+    answer:
+      "Henzi's Services LLC is the company behind MLS Writer, Pacalaca, and VOTE — founded by Joe Henzi of Henzi.org and the Henzi Foundation. We build software that simplifies complex workflows for real people, whether that's a real estate agent, an everyday investor, or an enterprise engineering team.",
   },
 ];
 
@@ -63,7 +68,7 @@ export function FAQ() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Everything you need to know about our platform
+            Everything you need to know about our products
           </motion.p>
         </div>
 

@@ -1,55 +1,71 @@
 import { motion } from "framer-motion";
 import {
-  Brain,
-  Zap,
+  FileText,
+  Share2,
   Shield,
-  Code,
-  Globe,
-  Sparkles,
+  TrendingUp,
+  Users,
+  Vote,
+  BarChart2,
+  Clock,
 } from "lucide-react";
 
 const features = [
   {
-    icon: Brain,
-    title: "Advanced AI Models",
+    icon: FileText,
+    title: "Listings in Seconds",
     description:
-      "Access state-of-the-art language models and neural networks for your applications.",
+      "Enter a property address and get a polished MLS listing ready to publish — no copywriting skills needed.",
     gradient: "from-purple-500 to-pink-500",
   },
   {
-    icon: Zap,
-    title: "Lightning Fast",
+    icon: Share2,
+    title: "Social & Blog Content",
     description:
-      "Optimized infrastructure ensures your AI queries are processed in milliseconds.",
-    gradient: "from-yellow-500 to-orange-500",
+      "Automatically generate Facebook posts, tweets, and property blog articles alongside every listing.",
+    gradient: "from-pink-500 to-rose-500",
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
+    title: "Fair Housing Compliant",
     description:
-      "Bank-level encryption and compliance with SOC 2, GDPR, and HIPAA standards.",
+      "Every piece of content is checked against Fair Housing Act standards so you stay protected.",
     gradient: "from-green-500 to-emerald-500",
   },
   {
-    icon: Code,
-    title: "Developer First",
+    icon: TrendingUp,
+    title: "Investing for Humans",
     description:
-      "Clean APIs, comprehensive docs, and SDKs in your favorite programming languages.",
+      "Pacalaca strips away the jargon and complexity — built for everyday people, not Wall Street professionals.",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
-    icon: Globe,
-    title: "Global Scale",
+    icon: Users,
+    title: "Accessible by Design",
     description:
-      "Deploy worldwide with edge locations across 6 continents for minimal latency.",
+      "A clean, approachable interface that guides you through investing concepts at your own pace.",
     gradient: "from-indigo-500 to-purple-500",
   },
   {
-    icon: Sparkles,
-    title: "Auto-Optimization",
+    icon: Vote,
+    title: "Decide What's Next",
     description:
-      "Smart caching and model selection automatically optimize for cost and performance.",
-    gradient: "from-pink-500 to-rose-500",
+      "VOTE uses WSJF scoring to help enterprise software teams prioritize without politics, gut instinct, or HiPPO-driven decisions.",
+    gradient: "from-emerald-500 to-teal-500",
+  },
+  {
+    icon: BarChart2,
+    title: "WSJF Prioritization",
+    description:
+      "Weighted Shortest Job First ranks your backlog by Cost of Delay divided by job size — so the highest-value, shortest work always rises to the top.",
+    gradient: "from-teal-500 to-cyan-500",
+  },
+  {
+    icon: Clock,
+    title: "No More Overthinking",
+    description:
+      "VOTE facilitates team scoring in real time. Everyone votes, the math is done automatically, and your next sprint is clear.",
+    gradient: "from-yellow-500 to-orange-500",
   },
 ];
 
@@ -79,10 +95,11 @@ export function Features() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-5xl font-bold"
+            id="products"
           >
-            Everything you need to{" "}
+            Three products,{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              build with AI
+              one mission
             </span>
           </motion.h2>
           <motion.p
@@ -92,7 +109,7 @@ export function Features() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Powerful features designed to help you ship AI-powered products faster
+            We use AI to eliminate busywork — whether you're a real estate agent, an everyday investor, or an enterprise engineering team
           </motion.p>
         </div>
 
