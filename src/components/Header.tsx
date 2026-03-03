@@ -8,7 +8,9 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Products", href: withBase("/#products") },
+    { label: "MLS Writer", href: withBase("/#mls-writer") },
+    { label: "Pacalaca", href: withBase("/#pacalaca") },
+    { label: "VOTE", href: withBase("/#vote") },
     { label: "About", href: withBase("/about") },
   ];
 
@@ -24,7 +26,7 @@ export function Header() {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-4">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -39,7 +41,7 @@ export function Header() {
         {/* Actions */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <Button className="hidden md:inline-flex" asChild>
+          <Button className="hidden lg:inline-flex" asChild>
             <a href="https://mlswriter.app" target="_blank" rel="noopener noreferrer">
               Try MLS Writer
             </a>

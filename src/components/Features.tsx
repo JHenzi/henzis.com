@@ -67,6 +67,13 @@ const features = [
       "VOTE facilitates team scoring in real time. Everyone votes, the math is done automatically, and your next sprint is clear.",
     gradient: "from-yellow-500 to-orange-500",
   },
+  {
+    icon: FileText,
+    title: "Work Off Your Plate",
+    description:
+      "We combine AI with practical software and clean workflows so the useful part gets done for you instead of turning into more admin.",
+    gradient: "from-slate-600 to-blue-600",
+  },
 ];
 
 const container = {
@@ -99,7 +106,7 @@ export function Features() {
           >
             Three products,{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              one mission
+              shared mission
             </span>
           </motion.h2>
           <motion.p
@@ -109,7 +116,7 @@ export function Features() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            We use AI to eliminate busywork — whether you're a real estate agent, an everyday investor, or an enterprise engineering team
+            We build tools for humans, using AI and other software to get things done for you.
           </motion.p>
         </div>
 

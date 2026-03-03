@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Who is Henzi's Services LLC?",
     answer:
-      "Henzi's Services LLC is the company behind MLS Writer, Pacalaca, and VOTE — founded by Joe Henzi of Henzi.org and the Henzi Foundation. We build software that simplifies complex workflows for real people, whether that's a real estate agent, an everyday investor, or an enterprise engineering team.",
+      "Henzi's Services LLC is the company behind MLS Writer, Pacalaca, and VOTE - founded by Joe Henzi of Henzi.org and the Henzi Foundation. We build tools for humans, using AI and other software to get things done for you whether that's a real estate agent, an everyday investor, or an enterprise engineering team.",
   },
 ];
 

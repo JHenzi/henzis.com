@@ -3,7 +3,7 @@ import { ArrowRight, ArrowRightLeft, Divide } from "lucide-react";
 
 export function WSJF() {
   return (
-    <section className="py-20 md:py-32">
+    <section id="vote" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center space-y-4 mb-16">

@@ -13,8 +13,8 @@ export function Footer() {
               Henzi's Services LLC
             </span>
             <p className="text-sm text-muted-foreground">
-              Building AI-powered tools that simplify real estate and investing
-              for real people.
+              Building tools for humans that simplify real estate, investing,
+              and team prioritization.
             </p>
           </div>
 
