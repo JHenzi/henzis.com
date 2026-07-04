@@ -29,11 +29,15 @@ export default {
           green: "var(--green)",
           purple: "var(--purple)",
         },
-        border: "hsl(var(--border))",
+        // background, foreground, card (DEFAULT), border, and muted-foreground
+        // are set as raw hex in global.css's second :root block — reference
+        // them directly. Everything else is still an "H S% L%" triplet from
+        // the first block, so those keep the hsl() wrapper.
+        border: "var(--border)",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -48,7 +52,7 @@ export default {
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          foreground: "var(--muted-foreground)",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -59,7 +63,7 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
+          DEFAULT: "var(--card)",
           foreground: "hsl(var(--card-foreground))",
         },
       },

@@ -3,19 +3,36 @@
 The site now implements the print-shop design system from `Henzi Human Software.dc.html`:
 paper + ink palette, 3px borders, hard offset shadows, Bricolage Grotesque headlines,
 Instrument Serif italic accents, Space Mono labels, flat accent colors (red / blue /
-yellow / green / purple), dotted-paper texture. **No gradients anywhere.** Light and
-dark are paper/ink inversions of the same system, driven by CSS variables in
+yellow / green / purple), dotted-paper texture, driven by CSS variables in
 `src/styles/global.css` — that file is the single source of truth for the palette.
+
+**Update (July 2026):** the comp's vivid one-off section colors are now matched
+literally, not toned down — this was corrected after John flagged the first pass as
+too conservative ("bland claude beige... don't be lazy"). The page background is the
+bright green wash (`#93F09C`, `.bg-page`), the nav is solid purple (`#AA93F0`,
+`.bg-nav`), the FAQ band is orange (`#FFA000`, `.bg-faq`), and the MLS section uses the
+literal green→tan gradient (`linear-gradient(180deg,#7CBA7E,#D59F69)`, `.bg-mls-gradient`)
+— utilities live in `global.css`'s `@layer utilities` block, applied on the relevant
+section/`<body>` classNames. These four are intentionally **not** theme-aware — they're
+fixed literal values regardless of light/dark, exactly matching the source comp's own
+inline styles (which also hardcoded them outside the `--paper`/`--ink` variable system).
+One consequence inherited from the comp itself: the MLS section's heading text still
+uses the theme-driven ink color, so in dark mode it can read light-on-light against the
+fixed light gradient — the comp has the same issue; worth a dedicated fix (e.g. force
+dark ink there regardless of theme, as already done for the intro paragraph) if it
+bothers you in practice.
+
+A related, unrelated-to-taste bug is also fixed: an earlier manual edit to
+`global.css` redefined `--background`, `--foreground`, `--card`, `--border`, and
+`--muted-foreground` as raw hex, but `tailwind.config.mjs` was still wrapping those in
+`hsl()` — `hsl(#f4ecdd)` is invalid CSS, so those utilities (`bg-background`,
+`text-foreground`, `bg-card`, etc.) were silently rendering nothing across the whole
+site. Fixed by having Tailwind reference those five tokens directly (no `hsl()`
+wrapper); everything else (primary, secondary, muted, accent, popover, destructive,
+ring, input) is untouched and still HSL-triplet-based.
 
 ## Deliberate deviations from the comp
 
-- **One-off hardcoded colors dropped.** The comp had a bright-green page background
-  (`#93F09C`), a purple nav (`#AA93F0`), an orange FAQ band (`#FFA000`), and a
-  green→tan *gradient* on the MLS section. These don't adapt to dark mode and one is
-  a gradient (against the brief). They're replaced with theme-aware tints:
-  MLS section = 8% red over paper, FAQ = 16% yellow over paper. If you want louder
-  colored section bands, tweak those `color-mix()` percentages in
-  `MLSSpotlight.tsx` / `FAQ.tsx` — one-line changes.
 - **CTAs go straight to the products** (mlswriter.app, pacalaca.app, vote.henzi.org)
   instead of the comp's in-page anchors. Decision pending below on deep-dive pages.
 - **Riso placeholder replaced** with the real screenshot `public/MLSWriterOutputPreview.png`

@@ -77,18 +77,7 @@ export function Footer() {
               >
                 The Henzi Foundation
               </a>
-              <a
-                href={withBase("/privacy")}
-                className="text-paper no-underline hover:text-brand-yellow"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href={withBase("/terms")}
-                className="text-paper no-underline hover:text-brand-yellow"
-              >
-                Terms of Service
-              </a>
+              
             </div>
           </div>
         </div>

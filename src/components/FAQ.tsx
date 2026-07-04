@@ -44,7 +44,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="border-t-[3px] border-line bg-[color-mix(in_srgb,var(--yellow)_16%,var(--paper))]"
+      className="bg-faq border-t-[3px] border-line"
     >
       <div className="mx-auto max-w-[820px] px-4 py-[70px] md:px-7">
         <div className="mb-9 text-center">

@@ -2,7 +2,7 @@ export function MLSSpotlight() {
   return (
     <section
       id="mls"
-      className="border-t-[3px] border-line bg-[color-mix(in_srgb,var(--red)_8%,var(--paper))]"
+      className="bg-mls-gradient border-t-[3px] border-line"
     >
       <div className="mx-auto grid max-w-[1180px] items-center gap-11 px-4 py-[70px] md:px-7 lg:grid-cols-2">
         <div>
@@ -14,7 +14,7 @@ export function MLSSpotlight() {
               not Sunday afternoons.
             </span>
           </h2>
-          <p className="mb-5 mt-4 max-w-[40ch] text-[17px] leading-relaxed text-ink">
+          <p className="mb-5 mt-4 max-w-[40ch] text-[17px] leading-relaxed text-[#000000]">
             Enter a property address and get a ready-to-publish listing — no
             copywriting skills required. Every draft is checked against Fair
             Housing rules so you can publish with confidence.

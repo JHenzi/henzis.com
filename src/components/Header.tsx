@@ -16,7 +16,7 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b-[3px] border-line bg-paper/90 backdrop-blur-sm">
+    <header className="bg-nav sticky top-0 z-50 w-full border-b-[3px] border-line backdrop-blur-sm">
       <nav className="mx-auto flex max-w-[1180px] items-center justify-between gap-5 px-4 py-3 md:px-7">
         {/* Logo */}
         <a
@@ -70,7 +70,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="border-t-[3px] border-line bg-paper lg:hidden">
+        <div className="bg-nav border-t-[3px] border-line lg:hidden">
           <div className="mx-auto max-w-[1180px] space-y-4 px-4 py-5 md:px-7">
             {navItems.map((item) => (
               <a

@@ -133,6 +133,10 @@
 }
 
 @layer utilities {
+  .bg-page {
+    background-color: #93F09C;
+  }
+
   .bg-nav {
     background-color: #AA93F0;
   }
