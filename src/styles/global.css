@@ -4,10 +4,10 @@
 
 /*
   Henzi Human Software — print-shop design system.
-  Paper + ink, hard offset shadows, flat accent colors. No gradients.
-  Raw hex tokens drive the design; the HSL triplets below keep
-  shadcn/Tailwind semantic classes (bg-background, text-muted-foreground…)
-  in the same palette so secondary pages inherit it.
+  Paper + ink, hard offset shadows, flat accent colors. Single light theme
+  only (no dark mode). Raw hex tokens drive the design; a few shadcn
+  semantic tokens below are still HSL triplets for components that haven't
+  been migrated off hsl(var(--x)) in tailwind.config.mjs.
 */
 
 @layer base {
@@ -26,9 +26,15 @@
     --shadow-c: #1b1712;
     --on-accent: #fcf8ef;
 
-    --background: 39 51% 91%;
-    --foreground: 33 20% 9%;
-    --card: 42 68% 96%;
+    /* Raw-hex semantic tokens (referenced directly, no hsl() wrapper) */
+    --background: #f4ecdd;
+    --foreground: #1b1712;
+    --card: #fcf8ef;
+    --border: #1b1712;
+    --muted-foreground: #6b6250;
+
+    /* Remaining shadcn tokens — still HSL triplets, still wrapped in
+       hsl(var(--x)) over in tailwind.config.mjs */
     --card-foreground: 33 20% 9%;
     --popover: 42 68% 96%;
     --popover-foreground: 33 20% 9%;
@@ -37,102 +43,62 @@
     --secondary: 38 48% 86%;
     --secondary-foreground: 33 20% 9%;
     --muted: 38 48% 86%;
-    --muted-foreground: 40 14% 37%;
     --accent: 38 48% 86%;
     --accent-foreground: 33 20% 9%;
     --destructive: 8 74% 54%;
     --destructive-foreground: 42 68% 96%;
-    --border: 33 20% 9%;
     --input: 33 20% 9%;
     --ring: 8 74% 54%;
     --radius: 0rem;
   }
-
-  .dark {
-    --paper: #16130d;
-    --paper-2: #211b12;
-    --card-c: #221c13;
-    --ink: #f4ecdd;
-    --ink-soft: #b4ab98;
-    --red: #ff6e52;
-    --blue: #7ea0f4;
-    --yellow: #f7c45c;
-    --green: #5fc58f;
-    --purple: #b78fe8;
-    --line: #f4ecdd;
-    --shadow-c: #000000;
-    --on-accent: #16130d;
-
-    --background: 40 26% 7%;
-    --foreground: 39 51% 91%;
-    --card: 36 28% 10%;
-    --card-foreground: 39 51% 91%;
-    --popover: 36 28% 10%;
-    --popover-foreground: 39 51% 91%;
-    --primary: 39 51% 91%;
-    --primary-foreground: 40 26% 7%;
-    --secondary: 36 29% 10%;
-    --secondary-foreground: 39 51% 91%;
-    --muted: 36 29% 10%;
-    --muted-foreground: 41 16% 65%;
-    --accent: 36 29% 10%;
-    --accent-foreground: 39 51% 91%;
-    --destructive: 10 100% 66%;
-    --destructive-foreground: 40 26% 7%;
-    --border: 39 51% 91%;
-    --input: 39 51% 91%;
-    --ring: 10 100% 66%;
-  }
 }
 
 @layer base {
-  :root {
-    --paper: #f4ecdd;
-    --paper-2: #ecdfc9;
-    --card-c: #fcf8ef;
-    --ink: #1b1712;
-    --ink-soft: #6b6250;
-    --red: #e14a32;
-    --blue: #2c55b0;
-    --yellow: #efae2c;
-    --green: #2e7d57;
-    --purple: #6e4c9c;
-    --line: #1b1712;
-    --shadow-c: #1b1712;
-    --on-accent: #fcf8ef;
-
-    /* Semantic mapping to your variables */
-    --background: #f4ecdd;
-    --foreground: #1b1712;
-    --card: #fcf8ef;
-    --border: #1b1712;
-    --muted-foreground: #6b6250;
+  * {
+    @apply border-border;
   }
-
-  .dark {
-    --paper: #16130d;
-    --paper-2: #211b12;
-    --card-c: #221c13;
-    --ink: #f4ecdd;
-    --ink-soft: #b4ab98;
-    --red: #ff6e52;
-    --blue: #7ea0f4;
-    --yellow: #f7c45c;
-    --green: #5fc58f;
-    --purple: #b78fe8;
-    --line: #f4ecdd;
-    --shadow-c: #000000;
-    --on-accent: #16130d;
-
-    --background: #16130d;
-    --foreground: #f4ecdd;
-    --card: #221c13;
-    --border: #f4ecdd;
-    --muted-foreground: #b4ab98;
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  ::selection {
+    background: var(--yellow);
+    color: #1b1712;
   }
 }
 
 @layer utilities {
+  /* Dotted paper texture */
+  .paper-dots {
+    background-image: radial-gradient(
+      color-mix(in srgb, var(--ink) 6%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 26px 26px;
+  }
+
+  /* Space Mono all-caps label */
+  .mono-label {
+    font-family: "Space Mono", monospace;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* Instrument Serif display accent */
+  .serif-accent {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .animate-floaty {
+    animation: floaty 3.6s ease-in-out infinite;
+  }
+  .animate-floaty-slow {
+    animation: floaty 4.4s ease-in-out infinite;
+  }
+
+  /* Fixed literal section colors from the comp — intentionally not
+     theme-derived, matching the comp's own hardcoded inline styles. */
   .bg-page {
     background-color: #93F09C;
   }
@@ -151,12 +117,10 @@
 }
 
 @keyframes floaty {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-9px);
   }
@@ -166,7 +130,6 @@
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-100%);
   }

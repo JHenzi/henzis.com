@@ -31,6 +31,22 @@ site. Fixed by having Tailwind reference those five tokens directly (no `hsl()`
 wrapper); everything else (primary, secondary, muted, accent, popover, destructive,
 ring, input) is untouched and still HSL-triplet-based.
 
+**Dark mode removed (July 2026).** Per John's request, the site is single-theme now:
+- Deleted `ThemeToggle.tsx`, its import/render in `Header.tsx`, the pre-paint
+  theme-init script in `main.astro`, and the "Toggle Theme" command in
+  `CommandPalette.tsx`.
+- `global.css` no longer has a `.dark` block at all — one `:root` block only.
+- `darkMode: ["class"]` removed from `tailwind.config.mjs`.
+- Note: the unused legacy demo components (Features, Testimonials, ChatInterface,
+  etc. — see item 8 below) still have `dark:` prefixed classes in their source, so
+  Tailwind still emits `dark:*` rules into the compiled CSS wherever those files are
+  in the content glob. Harmless dead weight since no live page renders those
+  components, but if you fully remove/restyle the demo pages, that CSS shrinks too.
+
+Also removed from `/about`: the `[ A career in six stamps ]` mono-label kicker under
+"How Joe Got Here" — was redundant with the heading and inaccurate once the count of
+timeline entries changes.
+
 ## Deliberate deviations from the comp
 
 - **CTAs go straight to the products** (mlswriter.app, pacalaca.app, vote.henzi.org)

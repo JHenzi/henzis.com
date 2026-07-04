@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Search, Home, FileText, Mail, Settings, Sun, Moon, Command } from "lucide-react";
+import { Search, Home, FileText, Mail, Settings, Command } from "lucide-react";
 import { withBase } from "@/lib/utils";
 
 interface CommandItem {
@@ -64,20 +64,6 @@ export function CommandPalette() {
       icon: Settings,
       action: () => window.location.href = withBase("/dashboard"),
       category: "Navigation",
-    },
-    {
-      id: "toggle-theme",
-      title: "Toggle Theme",
-      description: "Switch between light and dark mode",
-      icon: Sun,
-      action: () => {
-        document.documentElement.classList.toggle("dark");
-        localStorage.setItem(
-          "theme",
-          document.documentElement.classList.contains("dark") ? "dark" : "light"
-        );
-      },
-      category: "Actions",
     },
   ];
 

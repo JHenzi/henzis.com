@@ -2,7 +2,6 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ["class"],
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
   ],
@@ -30,9 +29,9 @@ export default {
           purple: "var(--purple)",
         },
         // background, foreground, card (DEFAULT), border, and muted-foreground
-        // are set as raw hex in global.css's second :root block — reference
-        // them directly. Everything else is still an "H S% L%" triplet from
-        // the first block, so those keep the hsl() wrapper.
+        // are set as raw hex in global.css's :root block — reference them
+        // directly. Everything else is still an "H S% L%" triplet, so those
+        // keep the hsl() wrapper.
         border: "var(--border)",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

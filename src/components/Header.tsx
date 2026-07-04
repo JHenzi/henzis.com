@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { withBase } from "@/lib/utils";
 
@@ -47,7 +46,6 @@ export function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <a
             href="https://mlswriter.app"
             target="_blank"

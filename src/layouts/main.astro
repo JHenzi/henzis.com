@@ -20,16 +20,6 @@ const { title = "Henzi's Services LLC - Tools Built for Humans" } = Astro.props;
 			rel="stylesheet"
 		/>
 		<title>{title}</title>
-		<script is:inline>
-			// Set theme before paint to avoid a flash of the wrong theme.
-			(function () {
-				var stored = localStorage.getItem('theme');
-				var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-				if (stored === 'dark' || (!stored && prefersDark)) {
-					document.documentElement.classList.add('dark');
-				}
-			})();
-		</script>
 	</head>
 	<body class="paper-dots bg-page min-h-screen">
 		<Header client:load />
