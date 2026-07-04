@@ -2,66 +2,170 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Henzi Human Software — print-shop design system.
+  Paper + ink, hard offset shadows, flat accent colors. No gradients.
+  Raw hex tokens drive the design; the HSL triplets below keep
+  shadcn/Tailwind semantic classes (bg-background, text-muted-foreground…)
+  in the same palette so secondary pages inherit it.
+*/
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.625rem;
+    --paper: #f4ecdd;
+    --paper-2: #ecdfc9;
+    --card-c: #fcf8ef;
+    --ink: #1b1712;
+    --ink-soft: #6b6250;
+    --red: #e14a32;
+    --blue: #2c55b0;
+    --yellow: #efae2c;
+    --green: #2e7d57;
+    --purple: #6e4c9c;
+    --line: #1b1712;
+    --shadow-c: #1b1712;
+    --on-accent: #fcf8ef;
+
+    --background: 39 51% 91%;
+    --foreground: 33 20% 9%;
+    --card: 42 68% 96%;
+    --card-foreground: 33 20% 9%;
+    --popover: 42 68% 96%;
+    --popover-foreground: 33 20% 9%;
+    --primary: 33 20% 9%;
+    --primary-foreground: 39 51% 91%;
+    --secondary: 38 48% 86%;
+    --secondary-foreground: 33 20% 9%;
+    --muted: 38 48% 86%;
+    --muted-foreground: 40 14% 37%;
+    --accent: 38 48% 86%;
+    --accent-foreground: 33 20% 9%;
+    --destructive: 8 74% 54%;
+    --destructive-foreground: 42 68% 96%;
+    --border: 33 20% 9%;
+    --input: 33 20% 9%;
+    --ring: 8 74% 54%;
+    --radius: 0rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --paper: #16130d;
+    --paper-2: #211b12;
+    --card-c: #221c13;
+    --ink: #f4ecdd;
+    --ink-soft: #b4ab98;
+    --red: #ff6e52;
+    --blue: #7ea0f4;
+    --yellow: #f7c45c;
+    --green: #5fc58f;
+    --purple: #b78fe8;
+    --line: #f4ecdd;
+    --shadow-c: #000000;
+    --on-accent: #16130d;
+
+    --background: 40 26% 7%;
+    --foreground: 39 51% 91%;
+    --card: 36 28% 10%;
+    --card-foreground: 39 51% 91%;
+    --popover: 36 28% 10%;
+    --popover-foreground: 39 51% 91%;
+    --primary: 39 51% 91%;
+    --primary-foreground: 40 26% 7%;
+    --secondary: 36 29% 10%;
+    --secondary-foreground: 39 51% 91%;
+    --muted: 36 29% 10%;
+    --muted-foreground: 41 16% 65%;
+    --accent: 36 29% 10%;
+    --accent-foreground: 39 51% 91%;
+    --destructive: 10 100% 66%;
+    --destructive-foreground: 40 26% 7%;
+    --border: 39 51% 91%;
+    --input: 39 51% 91%;
+    --ring: 10 100% 66%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  :root {
+    --paper: #f4ecdd;
+    --paper-2: #ecdfc9;
+    --card-c: #fcf8ef;
+    --ink: #1b1712;
+    --ink-soft: #6b6250;
+    --red: #e14a32;
+    --blue: #2c55b0;
+    --yellow: #efae2c;
+    --green: #2e7d57;
+    --purple: #6e4c9c;
+    --line: #1b1712;
+    --shadow-c: #1b1712;
+    --on-accent: #fcf8ef;
+
+    /* Semantic mapping to your variables */
+    --background: #f4ecdd;
+    --foreground: #1b1712;
+    --card: #fcf8ef;
+    --border: #1b1712;
+    --muted-foreground: #6b6250;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  .dark {
+    --paper: #16130d;
+    --paper-2: #211b12;
+    --card-c: #221c13;
+    --ink: #f4ecdd;
+    --ink-soft: #b4ab98;
+    --red: #ff6e52;
+    --blue: #7ea0f4;
+    --yellow: #f7c45c;
+    --green: #5fc58f;
+    --purple: #b78fe8;
+    --line: #f4ecdd;
+    --shadow-c: #000000;
+    --on-accent: #16130d;
+
+    --background: #16130d;
+    --foreground: #f4ecdd;
+    --card: #221c13;
+    --border: #f4ecdd;
+    --muted-foreground: #b4ab98;
   }
 }
 
-/* Custom animation classes */
+@layer utilities {
+  .bg-nav {
+    background-color: #AA93F0;
+  }
+
+  .bg-faq {
+    background-color: #FFA000;
+  }
+
+  .bg-mls-gradient {
+    background: linear-gradient(180deg, #7CBA7E, #D59F69);
+  }
+}
+
+@keyframes floaty {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .animate-marquee {
@@ -70,110 +174,4 @@
 
 .animate-marquee-reverse {
   animation: marquee 30s linear infinite reverse;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-.animate-shimmer {
-  animation: shimmer 2s infinite;
-}
-
-@keyframes blob {
-  0%, 100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-@keyframes gradient {
-  0%, 100% {
-    background-size: 200% 200%;
-    background-position: left center;
-  }
-  50% {
-    background-size: 200% 200%;
-    background-position: right center;
-  }
-}
-
-.animate-gradient {
-  animation: gradient 3s ease infinite;
-}
-
-/* Animated underline marker styling */
-.marker-underline {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 4px;
-}
-
-.marker-underline::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background-color: hsl(24 95% 53% / 0.2);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-
-.marker-underline:hover::after {
-  height: 100%;
-  opacity: 0.75;
-  transform: translateY(0);
-}
-
-/* Testimonial card hover effect */
-.testimonial-card {
-  transition: all 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-/* Image slider dots */
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.slider-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #D1D5DB;
-  margin: 0 0.25rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.slider-dot.active {
-  background-color: #F97316;
-  width: 10px;
-  height: 10px;
 }

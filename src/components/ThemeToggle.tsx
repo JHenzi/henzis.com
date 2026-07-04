@@ -1,49 +1,32 @@
-import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    // Check localStorage and system preference on mount
-    const stored = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    const initialTheme = stored === "dark" || (!stored && prefersDark) ? "dark" : "light";
-    setTheme(initialTheme);
-
-    if (initialTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    }
+    // The inline script in the layout already applied the class pre-paint;
+    // just sync component state with the document.
+    setTheme(
+      document.documentElement.classList.contains("dark") ? "dark" : "light"
+    );
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem("theme", newTheme);
   };
 
   return (
-    <Button
-      variant="outline"
-      size="icon"
+    <button
       onClick={toggleTheme}
-      className="rounded-full"
+      title="Toggle light / dark"
       aria-label="Toggle theme"
+      className="mono-label flex cursor-pointer items-center gap-2 border-[3px] border-line bg-card px-3 py-2 text-[11px] tracking-[0.12em] text-ink shadow-hard-sm transition-transform hover:translate-x-px hover:translate-y-px hover:shadow-hard-xs"
     >
-      {theme === "light" ? (
-        <Moon className="h-5 w-5" />
-      ) : (
-        <Sun className="h-5 w-5" />
-      )}
-    </Button>
+      <span className="h-[11px] w-[11px] rounded-full border-2 border-line bg-brand-yellow" />
+      {theme === "light" ? "Dark" : "Light"}
+    </button>
   );
 }

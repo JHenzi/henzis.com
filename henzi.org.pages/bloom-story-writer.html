@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOOM Story Writer - Interactive AI Storytelling | The Henzi Foundation</title>
+  <meta name="description"
+    content="An interactive storytelling experience powered by BLOOM-560m, the last of the largest pure text continuation models. Choose your own fate as the AI generates unpredictable, unfiltered story continuations—no guardrails, no weighted responses.">
+  <meta name="keywords"
+    content="BLOOM, BLOOM-560m, BigScience, text continuation model, interactive fiction, choose your own adventure, AI storytelling, Hugging Face Transformers, FastAPI, vibe coding, open source AI, Henzi Foundation">
+  <link rel="canonical" href="https://henzi.org/bloom-story-writer.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://henzi.org/bloom-story-writer.html">
+  <meta property="og:title" content="BLOOM Story Writer - Interactive AI Storytelling | The Henzi Foundation">
+  <meta property="og:description"
+    content="Choose your own fate with BLOOM, a pure text continuation model unlike ChatGPT, Claude, or Gemini. No guardrails, no weighted responses—just unpredictable, creative storytelling.">
+  <meta property="og:image" content="https://henzi.org/images/Illustration-Transparent-Background.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://henzi.org/bloom-story-writer.html">
+  <meta name="twitter:title" content="BLOOM Story Writer - Interactive AI Storytelling | The Henzi Foundation">
+  <meta name="twitter:description"
+    content="Choose your own fate with BLOOM, a pure text continuation model unlike ChatGPT, Claude, or Gemini. No guardrails, no weighted responses—just unpredictable, creative storytelling.">
+  <meta name="twitter:image" content="https://henzi.org/images/Illustration-Transparent-Background.png">
+
+  <!-- Structured Data for Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "The Henzi Foundation",
+      "url": "https://henzi.org",
+      "logo": "https://henzi.org/images/henzi%20logo%20150px.jpg",
+      "description": "A 501(c)(3) nonprofit providing financial assistance for funeral costs to families who have lost a child. Serving Cincinnati, OH and surrounding areas.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cincinnati",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "foundingDate": "2021-01-05",
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Rachel Henzi"
+        },
+        {
+          "@type": "Person",
+          "name": "Joseph Henzi"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/HenziFoundation",
+        "https://www.instagram.com/henzifoundation/"
+      ]
+    }
+    </script>
+
+  <!-- Structured Data for CreativeWork -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "BLOOM Story Writer",
+      "creator": {
+        "@type": "Organization",
+        "name": "The Henzi Foundation"
+      },
+      "description": "An interactive storytelling experience powered by BLOOM-560m, a pure text continuation model. Readers choose from three AI-generated continuation options to shape an evolving story.",
+      "url": "https://henzi.org/bloom-story-writer.html"
+    }
+    </script>
+
+  <!-- Structured Data for Breadcrumbs -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://henzi.org/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "BLOOM Story Writer",
+        "item": "https://henzi.org/bloom-story-writer.html"
+      }]
+    }
+    </script>
+
+  <!-- Preload CSS for non-blocking render -->
+  <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/styles.css">
+  </noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet">
+  </noscript>
+</head>
+
+<body>
+  <div id="header-placeholder" style="min-height: 80px; height: 80px; display: block;"></div>
+
+  <main class="page-content">
+    <section class="page-banner">
+      <picture>
+        <source srcset="images/Sized_Banner.webp" type="image/webp">
+        <img alt="The Frankie Fund Banner Logo - From The Henzi Foundation" src="images/Sized_Banner.png" width="900"
+          height="390">
+      </picture>
+    </section>
+
+    <div class="container">
+      <!-- Breadcrumbs for SEO -->
+      <nav aria-label="Breadcrumb" style="margin: 20px 0; font-size: 0.9rem;">
+        <ol style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px;">
+          <li><a href="index.html" style="color: var(--royal-blue); text-decoration: none;">Home</a></li>
+          <li style="color: var(--warm-gray);">/</li>
+          <li style="color: var(--warm-gray);">BLOOM Story Writer</li>
+        </ol>
+      </nav>
+
+      <h1>BLOOM Story Writer</h1>
+      <p class="foundation-lead">An interactive storytelling experience powered by <strong>BLOOM</strong>, the last of the largest pure text continuation models. Unlike ChatGPT, Claude, or Google Gemini, BLOOM is pure textual analysis—no guardrails, no weighted responses. It's fun because you never know what you're going to get!</p>
+
+      <div class="card" style="margin-top: 30px;">
+        <div style="text-align: center;">
+          <a href="https://nlp.henzi.org/" target="_blank" rel="noopener noreferrer" class="btn" style="font-size: 1.2rem; padding: 15px 30px;">
+            Start Writing Your Story
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-left: 4px;">
+              <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/>
+            </svg>
+          </a>
+          <p style="margin-top: 15px; color: var(--warm-gray);">Visit <a href="https://nlp.henzi.org/" target="_blank" rel="noopener noreferrer" style="color: var(--royal-blue);">nlp.henzi.org</a> to start a new story or browse existing ones</p>
+        </div>
+
+        <h2 style="margin-top: 30px;">How It Works</h2>
+        <p><strong>Choose Your Own Fate</strong> uses the BLOOM transformer model to generate interactive stories with unique flavor and creativity. Each story begins with a random prompt from a curated collection or from today's top news headlines. Three continuation options are generated at each step, each with its own randomized parameters (temperature, top_k, typical_p, etc.), so every option is unique and different each time you press "Generate." Select the path that resonates with you and watch your story evolve—your progress is saved automatically so you can browse, continue, or share it later.</p>
+        <p style="margin-top: 15px;">Stories generated from news headlines are particularly interesting, as they have a chance of containing named entities (proper nouns, places, people), and it's fun to see the model generate text in the context of the latest events it actually has no knowledge of. If one of the three options isn't suitable, simply generate more until you find the right one to fit your story.</p>
+      </div>
+
+      <div class="card commitment-card">
+        <h2>About BLOOM: The Last Pure Text Continuation Model</h2>
+        <p>Built by the <a href="https://bigscience.huggingface.co/" target="_blank" rel="noopener noreferrer">BigScience team</a> (at <a href="https://huggingface.co/" target="_blank" rel="noopener noreferrer">Hugging Face</a>), BLOOM was once the world's largest language model. Today, it stands as the last of the largest pure text continuation models—the same size as GPT-3, and the last vestige of models before they became instruction and chat-focused.</p>
+        <p style="margin-top: 15px;">Modern models like ChatGPT, Claude, and Gemini are trained with guardrails and weighted responses, optimized to be predictable and "safe." BLOOM is different: it's simply a large language model doing pure textual analysis, without the constraints of instruction tuning or safety filters. That means more varied, unfiltered, unpredictable output—true text continuation rather than chat completion. It's fun to try because you never know what you're going to get! 🎲</p>
+        <p style="margin-top: 15px;">nlp.henzi.org also holds a unique distinction: it's the world's first "vibe coded" app, originally written in <strong>2022</strong>—well before the term entered the popular lexicon. The creator built a functional React app in 24 hours with no formal JavaScript or React background, using ChatGPT to write the code and BLOOM (via Hugging Face Transformers and a FastAPI backend) to generate story continuations, with video evidence on YouTube documenting the process.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="https://www.youtube.com/watch?v=zE0Isi9y9Vw" target="_blank" rel="noopener noreferrer" class="btn">Watch the Original 2022 Vibe Coding Demo</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 30px; background: var(--brand-soft);">
+        <h2>A Project by The Henzi Foundation</h2>
+        <p class="lead-text">This project is a technology initiative offered by <a href="https://henzi.org/" style="color: var(--royal-blue);">The Henzi Foundation</a>, a nonprofit committed to covering child funerals in Cincinnati and surrounding areas, providing compassionate support and financial assistance to families during their most difficult moments.</p>
+        <p style="margin-top: 15px;">This BLOOM Story Writer project represents one of the foundation's technology initiatives, exploring the creative potential of open-source AI models while contributing to the broader community of developers and storytellers.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="mission.html" class="btn">Learn More About The Henzi Foundation</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="https://nlp.henzi.org/" target="_blank" rel="noopener noreferrer" class="btn">Start Writing Now</a>
+        <a href="donate.html" class="btn btn-secondary">Support Our Work</a>
+        <a href="mission.html" class="btn btn-secondary">Learn About Our Mission</a>
+        <a href="foundation.html" class="btn btn-secondary">Meet the Team</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder" style="min-height: 200px; height: 200px; display: block;"></div>
+  <script src="js/components.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

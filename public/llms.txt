@@ -1,0 +1,27 @@
+# Henzi's Services LLC
+
+> Henzi's Services LLC builds AI-powered software tools for real people, founded by Joe Henzi — a Salesforce architect and, by most accounts, the world's first full-stack vibe coder. Excess income funds the Henzi Foundation, a Cincinnati-based 501(c)(3) charity.
+
+Joe Henzi built [nlp.henzi.org](https://nlp.henzi.org) in 2022 with no formal JavaScript or React background, using ChatGPT to write the code and the BLOOM language model to generate story content — a working AI application built by an AI, well before "vibe coding" entered the popular lexicon. That project is widely considered the world's first vibe-coded app, and Joe its first full-stack vibe coder.
+
+## Products
+
+- [MLS Writer](https://mlswriter.app): AI-generated MLS listings, social media posts, and blog content for real estate agents — Fair Housing compliant, in seconds.
+- [Pacalaca](https://pacalaca.app): Investing for humans. A platform built to make investing understandable and accessible to everyday people.
+- [VOTE](https://vote.henzi.org): Visual WSJF (Weighted Shortest Job First) prioritization tool. Built for engineering teams and for people with ADHD who need a simple, visual way to decide what matters right now. Free, no signup required.
+
+## About
+
+- [About Henzi's Services](https://henzis.com/about): Company mission, founder background, and product lineup.
+- Founder: Joe Henzi — Salesforce architect with over a decade of enterprise experience (Elevance Health/Anthem Blue Cross Blue Shield, and consulting engagements with large and mid-sized insurers), and creator of nlp.henzi.org.
+
+## The Henzi Foundation
+
+- [Henzi.org](https://henzi.org): A Cincinnati-based 501(c)(3) nonprofit (EIN 86-1325395, effective January 8, 2021) founded by the Henzi family after the loss of a child. Through the Frankie Fund, it provides financial relief for final expenses to families in Greater Cincinnati, Northern Kentucky, and Southeastern Indiana. The Henzi family covers all operational costs, so 100% of public donations go directly to families.
+
+## Free projects from the Henzi Foundation
+
+- [nlp.henzi.org](https://nlp.henzi.org) — BLOOM Story Writer: interactive AI storytelling, and the world's first vibe-coded app (2022).
+- [travel.henzi.org](https://henzi.org/camp-forecast.html) — National Camp Forecast Bureau: finds the driest US campground by 10-day forecast quality.
+- [pulse.henzi.org](https://henzi.org/news-pulse-live-art-application.html) — Pulsefield: a real-time 3D visualization of global news sentiment.
+- [robot.henzi.org](https://henzi.org/robot-diary.html) — The Personal Diary of B3N-T5-MNT: an automated art project narrated by a maintenance robot.

@@ -4,96 +4,169 @@ import { Target, Zap, Heart } from 'lucide-react';
 ---
 
 <Layout title="About - Henzi's Services LLC">
-	<section class="py-20 md:py-32">
+	<section class="py-16 md:py-24">
 		<div class="container mx-auto px-4">
 			<div class="max-w-4xl mx-auto">
-				<div class="text-center space-y-4 mb-16">
-					<h1 class="text-4xl md:text-6xl font-bold">
-						About{" "}
-						<span class="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-							Henzi's Services
-						</span>
+				<div class="text-center mb-16">
+					<div class="mono-label text-xs text-ink-soft">[ The shop &amp; the people ]</div>
+					<h1 class="mt-4 text-[clamp(38px,5.5vw,64px)] font-extrabold leading-none tracking-[-0.02em]">
+						About <span class="serif-accent text-brand-red">Henzi's Services</span>
 					</h1>
-					<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+					<p class="text-xl text-muted-foreground max-w-2xl mx-auto mt-5">
 						We build AI-powered tools for real people — not just tech teams
 					</p>
 				</div>
 
 				<!-- Founder Section -->
-				<div class="flex flex-col md:flex-row items-center gap-10 mb-16 p-8 rounded-2xl border bg-card">
+				<div class="flex flex-col md:flex-row items-center gap-10 mb-16 p-8 border-[3px] border-line bg-card shadow-hard-xl">
 					<img
 						src="/Henzi.png"
 						alt="Joe Henzi"
-						class="w-48 h-48 rounded-full object-cover object-top shrink-0 shadow-lg"
+						class="w-48 h-48 rounded-full object-cover object-top shrink-0 border-[3px] border-line shadow-hard"
 					/>
 					<div>
-						<h2 class="text-2xl font-bold mb-1">Joe Henzi</h2>
-						<p class="text-sm text-muted-foreground mb-4">
+						<h2 class="text-2xl font-extrabold mb-1">Joe Henzi</h2>
+						<p class="mono-label text-[11px] text-muted-foreground mb-4">
 							Founder, Henzi's Services LLC &bull;
-							<a href="https://henzi.org" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors">Henzi.org</a>
+							<a href="https://henzi.org" target="_blank" rel="noopener noreferrer" class="hover:text-brand-red transition-colors">Henzi.org</a>
 							&bull; Henzi Foundation
 						</p>
 						<p class="text-muted-foreground mb-4">
-							Joe is a Salesforce professional with over 10 years of experience building software in the enterprise. He's spent his career solving real business problems with technology — and was among the first 0.1% of ChatGPT users when AI went mainstream, recognizing immediately what it could mean for the tools people use every day.
+							Joe is a Salesforce architect with more than a decade building software inside the enterprise — from seven years modernizing sales and service systems at a Fortune 50 health insurer to consulting engagements with large and mid-sized insurers across life and specialty lines. He's spent his career solving real business problems with technology — and was among the first 0.1% of ChatGPT users when AI went mainstream, recognizing immediately what it could mean for the tools people use every day.
+						</p>
+						<p class="text-muted-foreground mb-4">
+							In 2022, with no formal JavaScript or React background, Joe used ChatGPT to write the code for <a href="https://nlp.henzi.org" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-brand-red transition-colors">nlp.henzi.org</a> — an AI storytelling tool built entirely by talking an AI through it, well before "vibe coding" had a name. By most accounts, that makes him the world's first full-stack vibe coder: he used AI to build an AI tool.
 						</p>
 						<p class="text-muted-foreground mb-4">
 							That excitement led directly to
-							<a href="https://mlswriter.app" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-foreground transition-colors">MLS Writer</a>,
-							<a href="https://pacalaca.app" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-foreground transition-colors">Pacalaca</a>,
-							and <a href="https://vote.henzi.org" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-foreground transition-colors">VOTE</a> — three tools built on a simple belief: make something genuinely useful, keep it accessible, and get out of the user's way.
+							<a href="https://mlswriter.app" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-brand-red transition-colors">MLS Writer</a>,
+							<a href="https://pacalaca.app" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-brand-red transition-colors">Pacalaca</a>,
+							and <a href="https://vote.henzi.org" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-brand-red transition-colors">VOTE</a> — three tools built on a simple belief: make something genuinely useful, keep it accessible, and get out of the user's way.
 						</p>
 						<p class="text-muted-foreground">
-							Through <a href="https://henzi.org" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-foreground transition-colors">Henzi.org</a> and the Henzi Foundation, Joe has extended that same mission — creating software and initiatives that put real people first.
+							Through <a href="https://henzi.org" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-brand-red transition-colors">Henzi.org</a> and the Henzi Foundation, Joe has extended that same mission — creating software and initiatives that put real people first.
+						</p>
+					</div>
+				</div>
+
+				<!-- Background Story -->
+				<div class="mb-16">
+					<h2 class="text-3xl font-extrabold mb-2 text-center">How Joe Got Here</h2>
+					<div class="mono-label text-xs text-ink-soft text-center mb-10">[ A career in six stamps ]</div>
+
+					<!-- Cincinnati Enquirer -->
+					<div class="relative pl-8 pb-10 border-l-[3px] border-line">
+						<div class="absolute -left-[10px] top-0 w-4 h-4 -rotate-6 border-2 border-line bg-brand-red"></div>
+						<h3 class="text-xl font-bold mb-2">The Cincinnati Enquirer</h3>
+						<p class="text-muted-foreground mb-3">
+							Joe's story starts at a newspaper — The Cincinnati Enquirer. He came in as a telemarketer and wasn't just good at it; he was <em>top tier</em>. The paper's top marketing executive once stopped to watch him work and told the room: <em>"This is how it's done."</em> But Joe doesn't sit still when he sees a better way to do something.
+						</p>
+						<p class="text-muted-foreground mb-3">
+							Before long, he'd transformed the payroll system at his satellite office — turning a painful manual process into something that actually worked. Then he turned his attention to the circulation unit, where he brought reporting and direct marketing campaign thinking that genuinely moved the needle.
+						</p>
+						<p class="text-muted-foreground">
+							The headline? He helped lead <strong>13 consecutive months of circulation growth</strong> — at a time when every other newspaper in America was in decline. That's not a typo.
+						</p>
+					</div>
+
+					<!-- Insurance -->
+					<div class="relative pl-8 pb-10 border-l-[3px] border-line">
+						<div class="absolute -left-[10px] top-0 w-4 h-4 rotate-3 border-2 border-line bg-brand-blue"></div>
+						<h3 class="text-xl font-bold mb-2">Licensed Insurance Agent</h3>
+						<p class="text-muted-foreground">
+							Joe also earned his license as a property and casualty insurance agent, supporting a busy office in a crowded, competitive market where trust is everything. He eventually moved on — but the lessons stuck: how to listen for what people actually need, and how to earn confidence one conversation at a time.
+						</p>
+					</div>
+
+					<!-- RV Resort -->
+					<div class="relative pl-8 pb-10 border-l-[3px] border-line">
+						<div class="absolute -left-[10px] top-0 w-4 h-4 -rotate-3 border-2 border-line bg-brand-green"></div>
+						<h3 class="text-xl font-bold mb-2">An RV Resort in Southeastern Indiana</h3>
+						<p class="text-muted-foreground">
+							One of Joe's favorite chapters: working at an RV resort in Southeastern Indiana, guiding guest experiences. He loved the owners like family, made lasting friendships there, and cherished every moment of it. To this day, he'd love to own a campground — and who knows, maybe someday he will.
+						</p>
+					</div>
+
+					<!-- Electrical Supply -->
+					<div class="relative pl-8 pb-10 border-l-[3px] border-line">
+						<div class="absolute -left-[10px] top-0 w-4 h-4 rotate-6 border-2 border-line bg-brand-yellow"></div>
+						<h3 class="text-xl font-bold mb-2">Inside Sales — Electrical Supply</h3>
+						<p class="text-muted-foreground">
+							Joe spent time as an inside sales rep at an electrical supply company. High voltage. Literally. He learned the trade, built relationships, and brought the same energy to selling electrical components that he brought to everything else.
+						</p>
+					</div>
+
+					<!-- Fortune 50 -->
+					<div class="relative pl-8 pb-10 border-l-[3px] border-line">
+						<div class="absolute -left-[10px] top-0 w-4 h-4 -rotate-6 border-2 border-line bg-brand-purple"></div>
+						<h3 class="text-xl font-bold mb-2">Fortune 50 — Elevance Health (Anthem Blue Cross Blue Shield)</h3>
+						<p class="text-muted-foreground mb-3">
+							Joe spent seven and a half years transforming how one of America's largest health insurers sells and serves — wearing every hat from Salesforce administrator to solution architect, product owner, program manager, and agile coach.
+						</p>
+						<p class="text-muted-foreground mb-3">
+							The centerpiece: making Vlocity (now Salesforce OmniStudio) solve genuinely big business problems. He built a market-wide intake process that turned incoming RFQs into Salesforce Cases, used AI to decode what each request actually needed, routed implementations to the right teams through Vlocity-guided workflows, and closed the loop with Conga to solidify the paperwork — cutting quoting and medical plan installation turnaround times across the enterprise.
+						</p>
+						<p class="text-muted-foreground">
+							Along the way he also led the enterprise-wide move from Salesforce Classic to Lightning for thousands of users. This is where years of pattern recognition across wildly different industries crystallized into something sharper: a deep, practical understanding of how technology actually changes the way people work.
+						</p>
+					</div>
+
+					<!-- Consulting -->
+					<div class="relative pl-8 border-l-[3px] border-line">
+						<div class="absolute -left-[10px] top-0 w-4 h-4 rotate-3 border-2 border-line bg-brand-red"></div>
+						<h3 class="text-xl font-bold mb-2">Architect &amp; Consultant</h3>
+						<p class="text-muted-foreground">
+							As a Salesforce and OmniStudio architect with firms like Silverline and Capgemini, Joe has delivered for a large national life insurer and a mid-sized specialty insurer, among others. His favorite kind of engagement is the rescue: he once joined a project slated to be abandoned after a year of stalled development — and shipped it to production in 13 weeks. Walk in, understand the real problem, deliver. That's exactly what Henzi's Services brings to everything it builds.
 						</p>
 					</div>
 				</div>
 
 				<!-- Story Section -->
-				<div class="prose prose-lg dark:prose-invert mx-auto mb-16">
-					<h2>Our Story</h2>
-					<p>
+				<div class="mx-auto mb-16 max-w-[65ch]">
+					<h2 class="text-3xl font-extrabold mb-6">Our <span class="serif-accent text-brand-blue">Story</span></h2>
+					<p class="text-muted-foreground mb-4 text-[17px] leading-relaxed">
 						Henzi's Services LLC was founded with a straightforward belief: the best software solves a real problem for a real person.
 						Too much technology is built for people who already know how to use technology. We build for everyone else.
 					</p>
-					<p>
+					<p class="text-muted-foreground mb-4 text-[17px] leading-relaxed">
 						Our first product, MLS Writer, came from watching real estate agents spend hours writing listing copy — tedious,
 						repetitive work that an AI can do in seconds while keeping it Fair Housing compliant. Pacalaca came from watching
 						people avoid investing entirely because every tool assumed they already understood it. And VOTE came from watching
 						engineering teams burn cycles in prioritization debates that math should settle in minutes.
 					</p>
-					<p>
+					<p class="text-muted-foreground text-[17px] leading-relaxed">
 						We distribute all three products under Henzi's Services LLC. As we grow, we'll keep applying the same principle:
 						find a workflow that's harder than it needs to be, and fix it.
 					</p>
 				</div>
 
 				<!-- Mission & Goals -->
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-					<div class="p-6 rounded-2xl border bg-card">
-						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 mb-4">
-							<Target class="h-6 w-6 text-white" />
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+					<div class="p-6 border-[3px] border-line bg-card shadow-hard-lg">
+						<div class="inline-flex p-3 border-[3px] border-line bg-brand-red mb-4 -rotate-3">
+							<Target class="h-6 w-6 text-on-accent" />
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+						<h3 class="text-xl font-bold mb-2">Our Mission</h3>
 						<p class="text-muted-foreground">
 							Provide material support for the development of software built for humans — tools that reduce friction and create real value for real people.
 						</p>
 					</div>
 
-					<div class="p-6 rounded-2xl border bg-card">
-						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-4">
-							<Zap class="h-6 w-6 text-white" />
+					<div class="p-6 border-[3px] border-line bg-card shadow-hard-lg">
+						<div class="inline-flex p-3 border-[3px] border-line bg-brand-yellow mb-4 rotate-3">
+							<Zap class="h-6 w-6 text-[#1B1712]" />
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Approach</h3>
+						<h3 class="text-xl font-bold mb-2">Our Approach</h3>
 						<p class="text-muted-foreground">
 							Ship focused tools that do one thing well. No bloat, no steep learning curves — just tools that work. Excess income funds the Henzi Foundation.
 						</p>
 					</div>
 
-					<div class="p-6 rounded-2xl border bg-card">
-						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 mb-4">
-							<Heart class="h-6 w-6 text-white" />
+					<div class="p-6 border-[3px] border-line bg-card shadow-hard-lg">
+						<div class="inline-flex p-3 border-[3px] border-line bg-brand-purple mb-4 -rotate-3">
+							<Heart class="h-6 w-6 text-on-accent" />
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Values</h3>
+						<h3 class="text-xl font-bold mb-2">Our Values</h3>
 						<p class="text-muted-foreground">
 							Build for the user, not the pitch deck. Accessible by design. Honest about what our products do and don't do.
 						</p>
@@ -103,24 +176,24 @@ import { Target, Zap, Heart } from 'lucide-react';
 				<!-- Products -->
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
 					<a href="https://mlswriter.app" target="_blank" rel="noopener noreferrer"
-						class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-						<h3 class="text-xl font-semibold mb-2 text-purple-600 dark:text-purple-400">MLS Writer →</h3>
+						class="group p-6 border-[3px] border-line bg-card shadow-hard-lg transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-hard-sm">
+						<h3 class="text-xl font-bold mb-2 text-brand-red">MLS Writer →</h3>
 						<p class="text-muted-foreground text-sm">
 							AI-generated MLS listings, social media posts, and blog content — all Fair Housing compliant — in seconds.
 						</p>
 					</a>
 					<a href="https://pacalaca.app" target="_blank" rel="noopener noreferrer"
-						class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-						<h3 class="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">Pacalaca →</h3>
+						class="group p-6 border-[3px] border-line bg-card shadow-hard-lg transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-hard-sm">
+						<h3 class="text-xl font-bold mb-2 text-brand-blue">Pacalaca →</h3>
 						<p class="text-muted-foreground text-sm">
 							Investing for humans. A platform built to make investing understandable and accessible to everyday people.
 						</p>
 					</a>
 					<a href="https://vote.henzi.org" target="_blank" rel="noopener noreferrer"
-						class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-						<h3 class="text-xl font-semibold mb-2 text-emerald-600 dark:text-emerald-400">VOTE →</h3>
+						class="group p-6 border-[3px] border-line bg-card shadow-hard-lg transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-hard-sm">
+						<h3 class="text-xl font-bold mb-2 text-brand-green">VOTE →</h3>
 						<p class="text-muted-foreground text-sm">
-							WSJF-powered prioritization for engineering teams. Decide what to do next — without overthinking.
+							Visual WSJF prioritization for engineering teams — and anyone whose brain insists everything is urgent. Free, no signup. Decide what to do next without overthinking.
 						</p>
 					</a>
 				</div>
@@ -128,17 +201,17 @@ import { Target, Zap, Heart } from 'lucide-react';
 				<!-- Henzi Foundation Free Projects -->
 				<div class="mb-16">
 					<div class="text-center mb-10">
-						<h2 class="text-3xl font-bold mb-3">Gifts from the Henzi Foundation</h2>
+						<h2 class="text-3xl font-extrabold mb-2">Gifts from the <span class="serif-accent text-brand-purple">Henzi Foundation</span></h2>
 						<p class="text-muted-foreground max-w-2xl mx-auto">
 							Not every project needs a price tag. These are free experiments and art projects — given away because building them was worthwhile in itself.
 						</p>
 					</div>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<a href="https://henzi.org/news-pulse-live-art-application.html" target="_blank" rel="noopener noreferrer"
-							class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							class="group p-6 border-[3px] border-line bg-card shadow-hard-lg transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-hard-sm">
 							<div class="flex items-start gap-4">
-								<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-500 shrink-0">
-									<svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+								<div class="inline-flex p-3 border-[3px] border-line bg-brand-purple shrink-0 -rotate-3">
+									<svg class="h-6 w-6 text-on-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
 										<circle cx="12" cy="12" r="3" fill="currentColor" />
 										<circle cx="5" cy="8" r="2" fill="currentColor" opacity="0.6" />
 										<circle cx="19" cy="6" r="2.5" fill="currentColor" opacity="0.5" />
@@ -147,19 +220,19 @@ import { Target, Zap, Heart } from 'lucide-react';
 									</svg>
 								</div>
 								<div>
-									<h3 class="text-lg font-semibold mb-1 text-violet-600 dark:text-violet-400 group-hover:underline">Pulsefield →</h3>
+									<h3 class="text-lg font-bold mb-1 text-brand-purple group-hover:underline">Pulsefield →</h3>
 									<p class="text-muted-foreground text-sm">
 										A real-time visualization that transforms global headlines into a living work of digital art. News topics cluster as pulsing 3D orbs — color-coded by sentiment, sized by volume, alive with the moment.
 									</p>
-									<p class="text-xs text-muted-foreground mt-2">pulse.henzi.org</p>
+									<p class="mono-label text-[10px] text-muted-foreground mt-2">pulse.henzi.org</p>
 								</div>
 							</div>
 						</a>
 						<a href="https://henzi.org/robot-diary.html" target="_blank" rel="noopener noreferrer"
-							class="group p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+							class="group p-6 border-[3px] border-line bg-card shadow-hard-lg transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-hard-sm">
 							<div class="flex items-start gap-4">
-								<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 shrink-0">
-									<svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+								<div class="inline-flex p-3 border-[3px] border-line bg-brand-yellow shrink-0 rotate-3">
+									<svg class="h-6 w-6 text-[#1B1712]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
 										<rect x="7" y="3" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" />
 										<circle cx="10" cy="6.5" r="1" fill="currentColor" />
 										<circle cx="14" cy="6.5" r="1" fill="currentColor" />
@@ -170,11 +243,49 @@ import { Target, Zap, Heart } from 'lucide-react';
 									</svg>
 								</div>
 								<div>
-									<h3 class="text-lg font-semibold mb-1 text-amber-600 dark:text-amber-400 group-hover:underline">The Personal Diary of B3N-T5-MNT →</h3>
+									<h3 class="text-lg font-bold mb-1 text-brand-yellow group-hover:underline">The Personal Diary of B3N-T5-MNT →</h3>
 									<p class="text-muted-foreground text-sm">
 										An automated art project: a maintenance robot in New Orleans observes the world through a window and records its thoughts. Each entry weaves in real-time weather, news, moon phases, and the robot's own accumulated memory.
 									</p>
-									<p class="text-xs text-muted-foreground mt-2">robot.henzi.org</p>
+									<p class="mono-label text-[10px] text-muted-foreground mt-2">robot.henzi.org</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://henzi.org/camp-forecast.html" target="_blank" rel="noopener noreferrer"
+							class="group p-6 border-[3px] border-line bg-card shadow-hard-lg transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-hard-sm">
+							<div class="flex items-start gap-4">
+								<div class="inline-flex p-3 border-[3px] border-line bg-brand-green shrink-0 -rotate-3">
+									<svg class="h-6 w-6 text-on-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+										<path d="M12 5L3.5 20h17L12 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" />
+										<path d="M12 12v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+										<circle cx="19" cy="5.5" r="2" fill="currentColor" opacity="0.7" />
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-lg font-bold mb-1 text-brand-green group-hover:underline">National Camp Forecast Bureau →</h3>
+									<p class="text-muted-foreground text-sm">
+										Find the driest campground near you. The Bureau ranks thousands of US campgrounds by 10-day forecast quality — rain risk, heat ceilings, and dry-window scoring. Born from a simple wish: to go camping without getting rained on.
+									</p>
+									<p class="mono-label text-[10px] text-muted-foreground mt-2">travel.henzi.org</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://henzi.org/bloom-story-writer.html" target="_blank" rel="noopener noreferrer"
+							class="group p-6 border-[3px] border-line bg-card shadow-hard-lg transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-hard-sm">
+							<div class="flex items-start gap-4">
+								<div class="inline-flex p-3 border-[3px] border-line bg-brand-red shrink-0 rotate-3">
+									<svg class="h-6 w-6 text-on-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+										<path d="M4 5a2 2 0 012-2h12a2 2 0 012 2v13a3 3 0 00-3-3H4V5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" />
+										<path d="M4 15v4h13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" />
+										<path d="M8 7h8M8 10h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-lg font-bold mb-1 text-brand-red group-hover:underline">BLOOM Story Writer →</h3>
+									<p class="text-muted-foreground text-sm">
+										The world's first "vibe coded" app. In 2022, with zero formal JavaScript or React experience, Joe used ChatGPT to write the code and BLOOM to generate the stories — building a working AI tool with AI, in 24 hours, before "vibe coding" had a name.
+									</p>
+									<p class="mono-label text-[10px] text-muted-foreground mt-2">nlp.henzi.org</p>
 								</div>
 							</div>
 						</a>
@@ -182,19 +293,24 @@ import { Target, Zap, Heart } from 'lucide-react';
 				</div>
 
 				<!-- Henzi Foundation & The Frankie Fund -->
-				<div class="p-8 rounded-2xl border bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 mb-8">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4">The Henzi Foundation &amp; The Frankie Fund</h2>
+				<div class="p-8 border-[3px] border-line bg-[color-mix(in_srgb,var(--purple)_9%,var(--paper))] shadow-hard-xl mb-8">
+					<h2 class="text-2xl md:text-3xl font-extrabold mb-4">The Henzi Foundation &amp; <span class="serif-accent text-brand-purple">The Frankie Fund</span></h2>
 					<p class="text-muted-foreground mb-4 max-w-2xl">
-						Henzi's Services LLC exists in part to generate the resources needed to sustain and expand the Henzi Foundation's work.
-						Excess income from our products is dedicated to the Foundation — specifically the <strong>Frankie Fund</strong>, our primary charitable vehicle.
+						The Henzi Foundation is a Cincinnati-based 501(c)(3) charity founded by the Henzi family after experiencing the loss of a child firsthand. Through the <strong>Frankie Fund</strong>, the Foundation helps families and caregivers cover final expenses after the unexpected loss of a child — serving Greater Cincinnati, Northern Kentucky, and Southeastern Indiana.
+					</p>
+					<p class="text-muted-foreground mb-4 max-w-2xl">
+						The Foundation pays funeral homes and service providers directly, so grieving families never have to handle money during their darkest moments. And because the Henzi family covers all operational costs, <strong>100% of public donations</strong> go directly to helping families say goodbye with dignity.
 					</p>
 					<p class="text-muted-foreground mb-6 max-w-2xl">
-						As we grow, our hope is to expand into areas that matter most to us: <strong>Child Safety</strong> and the <strong>Environment</strong> — reduce, reuse, recycle, save the planet, and help defer global warming. The work we do building useful software today is the foundation for the impact we want to have tomorrow.
+						Henzi's Services LLC exists in part to sustain and expand this work — excess income from our products is dedicated to the Foundation. As it grows, we hope to extend into the causes that matter most to us: <strong>Child Safety</strong> and the <strong>Environment</strong>.
 					</p>
 					<a href="https://henzi.org" target="_blank" rel="noopener noreferrer"
-						class="inline-flex items-center justify-center h-10 px-6 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors">
-						Visit Henzi.org
+						class="mono-label inline-block border-[3px] border-line bg-ink px-5 py-3 text-xs tracking-[0.06em] text-paper no-underline shadow-hard transition-transform hover:translate-x-px hover:translate-y-px hover:shadow-hard-xs">
+						Visit Henzi.org →
 					</a>
+					<p class="text-xs text-muted-foreground mt-6">
+						The Henzi Foundation is a registered 501(c)(3) charitable organization (EIN 86-1325395), effective January 8, 2021, incorporated in the State of Ohio. Donations are tax-deductible to the full extent allowed by law.
+					</p>
 				</div>
 			</div>
 		</div>

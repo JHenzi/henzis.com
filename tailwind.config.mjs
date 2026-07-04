@@ -16,6 +16,19 @@ export default {
     },
     extend: {
       colors: {
+        paper: "var(--paper)",
+        "paper-2": "var(--paper-2)",
+        ink: "var(--ink)",
+        "ink-soft": "var(--ink-soft)",
+        line: "var(--line)",
+        "on-accent": "var(--on-accent)",
+        brand: {
+          red: "var(--red)",
+          blue: "var(--blue)",
+          yellow: "var(--yellow)",
+          green: "var(--green)",
+          purple: "var(--purple)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -56,7 +69,18 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Inter var", ...fontFamily.sans],
+        sans: ['"Bricolage Grotesque"', ...fontFamily.sans],
+        serif: ['"Instrument Serif"', ...fontFamily.serif],
+        mono: ['"Space Mono"', ...fontFamily.mono],
+      },
+      boxShadow: {
+        "hard-xs": "2px 2px 0 var(--shadow-c)",
+        "hard-sm": "3px 3px 0 var(--shadow-c)",
+        hard: "4px 4px 0 var(--shadow-c)",
+        "hard-md": "5px 5px 0 var(--shadow-c)",
+        "hard-lg": "6px 6px 0 var(--shadow-c)",
+        "hard-xl": "8px 8px 0 var(--shadow-c)",
+        "hard-2xl": "10px 10px 0 var(--shadow-c)",
       },
       keyframes: {
         marquee: {

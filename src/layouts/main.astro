@@ -13,9 +13,25 @@ const { title = "Henzi's Services LLC - Tools Built for Humans" } = Astro.props;
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Henzi's Services LLC builds tools for humans: MLS Writer, Pacalaca, and VOTE." />
 		<link rel="icon" type="image/png" href="/HenziServicesLogo.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<title>{title}</title>
+		<script is:inline>
+			// Set theme before paint to avoid a flash of the wrong theme.
+			(function () {
+				var stored = localStorage.getItem('theme');
+				var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				if (stored === 'dark' || (!stored && prefersDark)) {
+					document.documentElement.classList.add('dark');
+				}
+			})();
+		</script>
 	</head>
-	<body>
+	<body class="paper-dots min-h-screen">
 		<Header client:load />
 		<main>
 			<slot />

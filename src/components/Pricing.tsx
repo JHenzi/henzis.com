@@ -1,180 +1,106 @@
-import { motion } from "framer-motion";
-import { Check, ArrowRight, Home, TrendingUp, Vote } from "lucide-react";
-
 export function Pricing() {
   return (
-    <section id="pricing" className="py-20 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-5xl font-bold"
+    <section
+      id="pricing"
+      className="mx-auto max-w-[1180px] border-t-[3px] border-line px-4 pb-12 pt-[76px] md:px-7"
+    >
+      <div className="mx-auto mb-11 max-w-[620px] text-center">
+        <div className="mono-label text-xs text-ink-soft">[ Pricing ]</div>
+        <h2 className="mb-2 mt-3.5 text-[clamp(34px,4.6vw,54px)] font-extrabold leading-none tracking-[-0.02em]">
+          Simple, <span className="serif-accent text-brand-green">honest</span>{" "}
+          pricing.
+        </h2>
+        <p className="m-0 text-[17px] text-ink-soft">
+          Two products are free. One pays for itself the first time you use it.
+        </p>
+      </div>
+
+      <div className="grid items-start gap-6 pt-4 md:grid-cols-3">
+        {/* Pacalaca */}
+        <div className="border-[3px] border-line bg-card p-6 shadow-hard-xl">
+          <div className="mono-label text-[11px] tracking-[0.12em] text-brand-blue">
+            Pacalaca
+          </div>
+          <div className="mb-0.5 mt-2.5 flex items-baseline gap-1.5">
+            <span className="text-5xl font-extrabold tracking-[-0.03em]">$0</span>
+            <span className="font-mono text-xs text-ink-soft">/ forever</span>
+          </div>
+          <p className="text-sm leading-normal text-ink-soft">
+            Investing for humans — accessible to everyone at no cost.
+          </p>
+          <a
+            href="https://pacalaca.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mono-label my-4 block border-[3px] border-line bg-card px-3 py-3 text-center text-xs tracking-[0.06em] text-ink no-underline shadow-hard transition-transform hover:translate-x-px hover:translate-y-px hover:shadow-hard-xs"
           >
-            Simple,{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              honest pricing
-            </span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-          >
-            Two products are free. One pays for itself on the first listing.
-          </motion.p>
+            Get started free →
+          </a>
+          <ul className="m-0 flex list-none flex-col gap-2 p-0 font-mono text-[12.5px] text-ink">
+            <li>✓ Free to use</li>
+            <li>✓ No credit card</li>
+            <li>✓ Built for everyday investors</li>
+            <li>✓ No jargon, no complexity</li>
+          </ul>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {/* Pacalaca - Free */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative p-8 rounded-2xl border bg-card ring-2 ring-blue-500 shadow-xl"
+        {/* MLS Writer */}
+        <div className="relative border-[3px] border-line bg-card p-6 shadow-[8px_8px_0_var(--red)]">
+          <div className="mono-label absolute -top-4 left-1/2 -translate-x-1/2 -rotate-2 whitespace-nowrap border-[3px] border-line bg-brand-red px-3 py-1 text-[11px] tracking-[0.1em] text-on-accent shadow-hard-sm">
+            ★ Most popular
+          </div>
+          <div className="mono-label mt-1.5 text-[11px] tracking-[0.12em] text-brand-red">
+            MLS Writer
+          </div>
+          <div className="mb-0.5 mt-2.5 text-[40px] font-extrabold tracking-[-0.02em]">
+            See plans
+          </div>
+          <p className="text-sm leading-normal text-ink-soft">
+            Pays for itself the moment your listing goes live faster.
+          </p>
+          <a
+            href="https://mlswriter.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mono-label my-4 block border-[3px] border-line bg-brand-red px-3 py-3 text-center text-xs tracking-[0.06em] text-on-accent no-underline shadow-hard transition-transform hover:translate-x-px hover:translate-y-px hover:shadow-hard-xs"
           >
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-              <div className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 px-4 py-1 text-xs font-semibold text-white">
-                Always Free
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500">
-                <TrendingUp className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold">Pacalaca</h3>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold">$0</span>
-                <span className="text-muted-foreground">/forever</span>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                Investing for humans — accessible to everyone at no cost.
-              </p>
-              <a
-                href="https://pacalaca.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 h-10 px-6 rounded-md border bg-background hover:bg-accent font-medium text-sm transition-colors"
-              >
-                Get started free <ArrowRight className="h-4 w-4" />
-              </a>
-              <div className="pt-4 space-y-3">
-                {[
-                  "Free to use",
-                  "No credit card required",
-                  "Built for everyday investors",
-                  "No jargon, no complexity",
-                ].map((f, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">{f}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+            Try for free →
+          </a>
+          <ul className="m-0 flex list-none flex-col gap-2 p-0 font-mono text-[12.5px] text-ink">
+            <li>✓ Listings in seconds</li>
+            <li>✓ Social + blog content</li>
+            <li>✓ Fair Housing compliant</li>
+            <li>✓ Works in all major browsers</li>
+          </ul>
+        </div>
 
-          {/* MLS Writer - Paid */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="relative p-8 rounded-2xl border bg-card ring-2 ring-purple-500 shadow-xl"
+        {/* VOTE */}
+        <div className="border-[3px] border-line bg-card p-6 shadow-hard-xl">
+          <div className="mono-label text-[11px] tracking-[0.12em] text-brand-green">
+            VOTE
+          </div>
+          <div className="mb-0.5 mt-2.5 flex items-baseline gap-1.5">
+            <span className="text-5xl font-extrabold tracking-[-0.03em]">$0</span>
+            <span className="font-mono text-xs text-ink-soft">/ forever</span>
+          </div>
+          <p className="text-sm leading-normal text-ink-soft">
+            WSJF-powered prioritization. Decide what's next without
+            overthinking.
+          </p>
+          <a
+            href="https://vote.henzi.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mono-label my-4 block border-[3px] border-line bg-brand-green px-3 py-3 text-center text-xs tracking-[0.06em] text-on-accent no-underline shadow-hard transition-transform hover:translate-x-px hover:translate-y-px hover:shadow-hard-xs"
           >
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-              <div className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-1 text-xs font-semibold text-white">
-                For Real Estate Pros
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500">
-                <Home className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold">MLS Writer</h3>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold">See plans</span>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                Pays for itself the moment you stop writing listings by hand.
-              </p>
-              <a
-                href="https://mlswriter.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 h-10 px-6 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 font-medium text-sm transition-colors"
-              >
-                Try for free <ArrowRight className="h-4 w-4" />
-              </a>
-              <div className="pt-4 space-y-3">
-                {[
-                  "MLS listings in seconds",
-                  "Facebook, Twitter & blog content",
-                  "Fair Housing Act compliant",
-                  "Works in all major browsers",
-                ].map((f, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">{f}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* VOTE - Free */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative p-8 rounded-2xl border bg-card ring-2 ring-emerald-500 shadow-xl"
-          >
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-              <div className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-1 text-xs font-semibold text-white">
-                Always Free
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500">
-                <Vote className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold">VOTE</h3>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold">$0</span>
-                <span className="text-muted-foreground">/forever</span>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                WSJF-powered prioritization. Decide what to do next — without overthinking.
-              </p>
-              <a
-                href="https://vote.henzi.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 h-10 px-6 rounded-md border bg-background hover:bg-accent font-medium text-sm transition-colors"
-              >
-                Start voting <ArrowRight className="h-4 w-4" />
-              </a>
-              <div className="pt-4 space-y-3">
-                {[
-                  "WSJF scoring built in",
-                  "Guided scoring system",
-                  "Auto-ranked backlog",
-                  "No spreadsheets required",
-                ].map((f, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">{f}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+            Start voting →
+          </a>
+          <ul className="m-0 flex list-none flex-col gap-2 p-0 font-mono text-[12.5px] text-ink">
+            <li>✓ WSJF scoring built in</li>
+            <li>✓ Guided scoring system</li>
+            <li>✓ Auto-ranked backlog</li>
+            <li>✓ No spreadsheets required</li>
+          </ul>
         </div>
       </div>
     </section>

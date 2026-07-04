@@ -1,10 +1,4 @@
-import { motion } from "framer-motion";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { useState } from "react";
 
 const faqs = [
   {
@@ -45,53 +39,49 @@ const faqs = [
 ];
 
 export function FAQ() {
+  const [open, setOpen] = useState<number>(0);
+
   return (
-    <section id="faq" className="py-20 md:py-32">
-      <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-5xl font-bold"
-          >
+    <section
+      id="faq"
+      className="border-t-[3px] border-line bg-[color-mix(in_srgb,var(--yellow)_16%,var(--paper))]"
+    >
+      <div className="mx-auto max-w-[820px] px-4 py-[70px] md:px-7">
+        <div className="mb-9 text-center">
+          <div className="mono-label text-xs text-ink-soft">[ FAQ ]</div>
+          <h2 className="mt-3 text-[clamp(30px,4vw,46px)] font-extrabold leading-none tracking-[-0.02em]">
             Frequently asked{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              questions
-            </span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-          >
-            Everything you need to know about our products
-          </motion.p>
+            <span className="serif-accent text-brand-purple">questions</span>
+          </h2>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
-        >
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </motion.div>
+        <div className="flex flex-col gap-3">
+          {faqs.map((faq, index) => {
+            const isOpen = open === index;
+            return (
+              <div
+                key={index}
+                className="border-[3px] border-line bg-card shadow-hard-md"
+              >
+                <button
+                  onClick={() => setOpen(isOpen ? -1 : index)}
+                  aria-expanded={isOpen}
+                  className="flex w-full cursor-pointer items-center justify-between gap-4 border-none bg-transparent px-5 py-4 text-left font-sans text-[17px] font-bold text-ink"
+                >
+                  <span>{faq.question}</span>
+                  <span className="shrink-0 font-mono text-[22px] leading-none text-brand-red">
+                    {isOpen ? "–" : "+"}
+                  </span>
+                </button>
+                {isOpen && (
+                  <div className="border-t-2 border-dashed border-ink/30 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-ink-soft">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

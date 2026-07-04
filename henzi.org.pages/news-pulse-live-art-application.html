@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulsefield - Live Art Application | The Henzi Foundation</title>
+  <meta name="description"
+    content="Pulsefield is a real-time news visualization that transforms global headlines into a living work of digital art. Created by Joe Henzi for our donors and friends to enjoy.">
+  <meta name="keywords"
+    content="Pulsefield, Joe Henzi, news visualization, digital art, real-time news, data visualization, Henzi Foundation, interactive art">
+  <link rel="canonical" href="https://henzi.org/news-pulse-live-art-application.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://henzi.org/news-pulse-live-art-application.html">
+  <meta property="og:title" content="Pulsefield - Live Art Application | The Henzi Foundation">
+  <meta property="og:description"
+    content="A living canvas where news becomes color, motion, and light. Explore Pulsefield, a real-time news visualization created by Joe Henzi.">
+  <meta property="og:image" content="https://henzi.org/images/pulsefield.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://henzi.org/news-pulse-live-art-application.html">
+  <meta name="twitter:title" content="Pulsefield - Live Art Application | The Henzi Foundation">
+  <meta name="twitter:description"
+    content="A living canvas where news becomes color, motion, and light. Explore Pulsefield, a real-time news visualization.">
+  <meta name="twitter:image" content="https://henzi.org/images/pulsefield.png">
+
+  <!-- Structured Data for Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "The Henzi Foundation",
+      "url": "https://henzi.org",
+      "logo": "https://henzi.org/images/henzi%20logo%20150px.jpg",
+      "description": "A 501(c)(3) nonprofit providing financial assistance for funeral costs to families who have lost a child. Serving Cincinnati, OH and surrounding areas.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cincinnati",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "foundingDate": "2021-01-05",
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Rachel Henzi"
+        },
+        {
+          "@type": "Person",
+          "name": "Joseph Henzi"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/HenziFoundation",
+        "https://www.instagram.com/henzifoundation/"
+      ]
+    }
+    </script>
+
+  <!-- Structured Data for CreativeWork -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Pulsefield",
+      "creator": {
+        "@type": "Person",
+        "name": "Joe Henzi"
+      },
+      "description": "A real-time news visualization that transforms global headlines into a living work of digital art.",
+      "url": "https://pulse.henzi.org",
+      "image": "https://henzi.org/images/pulsefield.png"
+    }
+    </script>
+
+  <!-- Structured Data for Breadcrumbs -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://henzi.org/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Pulsefield",
+        "item": "https://henzi.org/news-pulse-live-art-application.html"
+      }]
+    }
+    </script>
+
+  <!-- Preload CSS for non-blocking render -->
+  <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/styles.css">
+  </noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet">
+  </noscript>
+</head>
+
+<body>
+  <div id="header-placeholder" style="min-height: 80px; height: 80px; display: block;"></div>
+
+  <main class="page-content">
+    <section class="page-banner">
+      <picture>
+        <source srcset="images/Sized_Banner.webp" type="image/webp">
+        <img alt="The Frankie Fund Banner Logo - From The Henzi Foundation" src="images/Sized_Banner.png" width="900"
+          height="390">
+      </picture>
+    </section>
+
+    <div class="container">
+      <!-- Breadcrumbs for SEO -->
+      <nav aria-label="Breadcrumb" style="margin: 20px 0; font-size: 0.9rem;">
+        <ol style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px;">
+          <li><a href="index.html" style="color: var(--royal-blue); text-decoration: none;">Home</a></li>
+          <li style="color: var(--warm-gray);">/</li>
+          <li style="color: var(--warm-gray);">Pulsefield</li>
+        </ol>
+      </nav>
+
+      <h1>Pulsefield</h1>
+      <p class="foundation-lead">A living canvas where news becomes color, motion, and light. <strong>Pulsefield</strong> is an AI representation of the news—a real-time visualization that transforms the constant stream of global headlines into a living, breathing work of digital art. Created by <strong>Joe Henzi</strong>, this fun project is a gift for our donors and friends to enjoy. <strong>What is the current pulse?</strong></p>
+
+      <div class="card" style="margin-top: 30px; text-align: center;">
+        <a href="https://pulse.henzi.org" target="_blank" rel="noopener noreferrer" class="btn" style="font-size: 1.2rem; padding: 15px 30px;">
+          Check the Pulse!
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-left: 4px;">
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/>
+          </svg>
+        </a>
+        <p style="margin-top: 15px; color: var(--warm-gray);">Visit <a href="https://pulse.henzi.org" target="_blank" rel="noopener noreferrer" style="color: var(--royal-blue);">pulse.henzi.org</a> to see the news come alive</p>
+      </div>
+
+      <div class="card" style="margin-top: 30px;">
+        <h2>What is Pulsefield?</h2>
+        <p>Ever wanted to watch the pulse of the world in real-time? <strong>Pulsefield</strong> is an AI representation of the news that turns boring headlines into something actually cool! Instead of scrolling through endless news feeds, Pulsefield shows you current events as colorful, pulsing "blobs" that float and dance around in a three-dimensional space. Each blob is a topic cluster—groups of related news stories that our AI has intelligently grouped together. It's like watching the news have a party!</p>
+        
+        <div style="margin: 30px 0; text-align: center;">
+          <img src="images/pulsefield.png" alt="Pulsefield visualization showing colorful pulsing blobs representing news topics" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+          <p style="margin-top: 15px; color: var(--warm-gray); font-size: 0.9rem; font-style: italic;">Check the Pulse! A snapshot of Pulsefield in action</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>How It Works</h2>
+        <p>Here's the fun part: Pulsefield gobbles up news from major sources, processes each headline through our AI (powered by <strong>GPT-OSS 120b</strong>), and figures out what topics are hot. These topics then become soft, glowing orbs that do all sorts of cool stuff:</p>
+        
+        <ul style="line-height: 2; margin-left: 20px; margin-top: 15px;">
+          <li><strong>Grow and shrink</strong> based on how many stories are covering a topic (bigger = more buzz!)</li>
+          <li><strong>Pulse with intensity</strong> when breaking news hits—watch them throb!</li>
+          <li><strong>Attract each other</strong> when topics are related (like "holiday shopping" and "retail sales" hanging out together)</li>
+          <li><strong>Repel apart</strong> when topics are unrelated, keeping things nice and organized</li>
+          <li><strong>Change color</strong> based on sentiment—greens and blues for the good news, reds for the not-so-good, creating a visual mood map of what's happening in the world</li>
+        </ul>
+
+        <p style="margin-top: 20px;"><strong>Want to explore?</strong></p>
+        <ul style="line-height: 2; margin-left: 20px; margin-top: 15px;">
+          <li><strong>Hover over any blob</strong> (or tap on mobile) to see more about that topic—like growth in the last 24 hours, sentiment breakdowns, and what's driving the conversation</li>
+          <li><strong>Click or tap a blob</strong> to see all the headlines for that topic, with links to the actual stories. You can use this to read the news!</li>
+        </ul>
+        <p style="margin-top: 15px;">It's like having a news feed that's actually fun to explore!</p>
+      </div>
+
+      <div class="card">
+        <h2>The Technology Behind It</h2>
+        <p>Built with a whole bunch of fun tech, Pulsefield is powered by:</p>
+        
+        <ul style="line-height: 2; margin-left: 20px; margin-top: 15px;">
+          <li><strong>GPT-OSS 120b:</strong> Our AI brain that makes sense of all the news</li>
+          <li><strong>Real-time processing:</strong> Constantly chomping through news feeds like a hungry data monster</li>
+          <li><strong>Machine learning magic:</strong> Uses advanced AI to understand how stories relate to each other</li>
+          <li><strong>Physics simulation:</strong> Makes those blobs move naturally with force-field dynamics (it's like they have their own gravity!)</li>
+          <li><strong>Live updates:</strong> Streams changes instantly so you see the pulse in real-time</li>
+          <li><strong>Scalable architecture:</strong> Handles thousands of articles without breaking a sweat</li>
+          <li><strong>Mobile-responsive design:</strong> Works great on your phone, tablet, or desktop</li>
+          <li><strong>Temporal dynamics:</strong> Tracks how topics grow, shrink, and evolve over time</li>
+        </ul>
+
+        <p style="margin-top: 20px;">All built with open-source technologies because we believe in sharing the fun!</p>
+        
+        <p style="margin-top: 15px; color: var(--warm-gray); font-size: 0.9rem;"><em>Tech Stack: React, Three.js, FastAPI, PostgreSQL, Redis, Docker, Python, GPT-OSS 120b, Machine Learning (HDBSCAN, UMAP, Sentence Transformers)</em></p>
+      </div>
+
+      <div class="card">
+        <h2>Why It's Cool</h2>
+        <p>Let's be honest—reading the news can be overwhelming. Pulsefield gives you a totally different way to see what's happening in the world. Instead of boring lists, you get to see patterns, relationships, and how topics evolve in real-time. It's both useful (you can actually understand what's going on) and beautiful (it's art, after all!). Plus, it's just fun to watch!</p>
+      </div>
+
+      <div class="card commitment-card">
+        <h2>A Fun Project by Joe</h2>
+        <p>This is <strong>Joe Henzi's</strong> brainchild—a passion project that combines his love for technology, AI (including <strong>GPT-OSS 120b</strong>), and making cool stuff. Built from scratch, Pulsefield brings together data engineering, machine learning, real-time systems, and interactive visualization into something that's both smart and beautiful.</p>
+        <p style="margin-top: 15px;">Pulsefield is always evolving, with new features and improvements being added regularly. It's where art meets technology meets data—proof that code can create something genuinely cool and fun!</p>
+      </div>
+
+      <div class="card" style="margin-top: 30px; background: var(--brand-soft); text-align: center;">
+        <h2>Ready to Check the Pulse?</h2>
+        <p class="lead-text">Head over to the live application and see the AI representation of the news in action! Watch as stories cluster, pulse, and evolve in real-time. It's mesmerizing!</p>
+        <div style="margin-top: 30px;">
+          <a href="https://pulse.henzi.org" target="_blank" rel="noopener noreferrer" class="btn">Check the Pulse! →</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="donate.html" class="btn">Support Our Work</a>
+        <a href="mission.html" class="btn btn-secondary">Learn About Our Mission</a>
+        <a href="foundation.html" class="btn btn-secondary">Meet the Team</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder" style="min-height: 200px; height: 200px; display: block;"></div>
+  <script src="js/components.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,122 +1,66 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Clock, FileText, Shield, TrendingUp } from "lucide-react";
-
-const highlights = [
+const tiles = [
   {
-    icon: TrendingUp,
+    shape: "h-[34px] w-[34px] -rotate-6 border-[3px] border-line bg-brand-blue",
     title: "Invest like a human",
-    description:
-      "See performance, activity, and orders in one simple screen so you can make your own decisions faster.",
-    gradient: "from-blue-500 to-cyan-500",
+    description: "Plain language, no impossible spreadsheets to decode.",
   },
   {
-    icon: Clock,
+    shape: "h-[34px] w-[34px] rounded-full border-[3px] border-line bg-brand-yellow",
     title: "One clear view",
-    description:
-      "Performance, activity, and orders stay in one readable workflow so a quick check feels useful, not overwhelming.",
-    gradient: "from-cyan-500 to-sky-500",
+    description: "Performance, activity and trades in one honest place.",
   },
   {
-    icon: FileText,
-    title: "Review before you trade",
-    description:
-      "Review your order clearly, understand what changed, and place trades on your terms.",
-    gradient: "from-sky-500 to-indigo-500",
+    shape: "h-[34px] w-[34px] rotate-[8deg] border-[3px] border-line bg-brand-green",
+    title: "Nothing hidden",
+    description: "See every trade before it's made, explained simply.",
   },
   {
-    icon: Shield,
-    title: "Protected and steady",
-    description:
-      "Use reminders, secure connections, and trade protection to keep the process calm and deliberate.",
-    gradient: "from-indigo-500 to-blue-500",
+    shape:
+      "h-[34px] w-[34px] rounded-[50%_50%_50%_0] border-[3px] border-line bg-brand-purple",
+    title: "Free to start",
+    description: "Accessible to everyone — no card, no catch.",
   },
 ];
 
 export function Pacalaca() {
   return (
-    <section id="pacalaca" className="py-20 md:py-32">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="inline-flex items-center gap-2 rounded-full border bg-background/60 backdrop-blur-sm px-4 py-1.5 text-sm mb-6">
-                <span className="text-muted-foreground">Pacalaca.app</span>
-              </div>
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              className="text-3xl md:text-5xl font-bold"
-            >
-              Investing for{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
-                humans
-              </span>
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-lg text-muted-foreground max-w-2xl mx-auto"
-            >
-              Pacalaca keeps investing readable: one calm place to review performance, activity, and trades without drowning in finance jargon.
-            </motion.p>
-          </div>
+    <section id="pacalaca" className="border-t-[3px] border-line">
+      <div className="mx-auto max-w-[1180px] px-4 py-[70px] md:px-7">
+        <div className="mx-auto max-w-[720px] text-center">
+          <div className="mono-label text-xs text-brand-blue">[ Pacalaca ]</div>
+          <h2 className="mb-2 mt-3.5 text-[clamp(32px,4.4vw,52px)] font-extrabold leading-[1.02] tracking-[-0.02em]">
+            Investing for humans.
+          </h2>
+          <p className="serif-accent m-0 text-[clamp(22px,3vw,32px)] leading-tight text-brand-blue">
+            No jargon. No finance-bro theater. Just a clear picture of your
+            money.
+          </p>
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
-          >
-            {highlights.map((highlight, index) => {
-              const Icon = highlight.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 rounded-2xl border bg-card hover:shadow-lg transition-all duration-300"
-                >
-                  <div
-                    className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${highlight.gradient} mb-4`}
-                  >
-                    <Icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{highlight.title}</h3>
-                  <p className="text-muted-foreground">{highlight.description}</p>
-                </div>
-              );
-            })}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center p-8 rounded-2xl border bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30"
-          >
-            <h3 className="text-2xl font-bold mb-3">Explore Pacalaca Features</h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              The full product goes deeper on portfolio review, readable trade flows, and a simpler daily investing workflow.
-            </p>
-            <a
-              href="https://pacalaca.app/features"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 h-11 px-8 rounded-md bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium hover:from-blue-700 hover:to-cyan-700 transition-all"
+        <div className="mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {tiles.map((t) => (
+            <div
+              key={t.title}
+              className="border-[3px] border-line bg-card p-5 shadow-hard-lg"
             >
-              See all features <ArrowRight className="h-4 w-4" />
-            </a>
-          </motion.div>
+              <div className={`mb-3.5 ${t.shape}`} />
+              <div className="text-lg font-extrabold">{t.title}</div>
+              <p className="mt-2 text-sm leading-normal text-ink-soft">
+                {t.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-9 text-center">
+          <a
+            href="https://pacalaca.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mono-label inline-block border-[3px] border-line bg-brand-blue px-5 py-3 text-xs tracking-[0.06em] text-on-accent no-underline shadow-hard transition-transform hover:translate-x-px hover:translate-y-px hover:shadow-hard-xs"
+          >
+            Get started free →
+          </a>
         </div>
       </div>
     </section>
