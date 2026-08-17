@@ -3,7 +3,6 @@ import '../styles/global.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { CommandPalette } from '@/components/CommandPalette';
-import { CookieConsent } from '@/components/CookieConsent';
 const { title = "Henzi's Services LLC - Tools Built for Humans" } = Astro.props;
 ---
 
@@ -28,6 +27,5 @@ const { title = "Henzi's Services LLC - Tools Built for Humans" } = Astro.props;
 		</main>
 		<Footer />
 		<CommandPalette client:load />
-		<CookieConsent client:load />
 	</body>
 </html>

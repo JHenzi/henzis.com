@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Search, Home, FileText, Mail, Settings, Command } from "lucide-react";
+import { Search, Home, FileText, Mail, Command } from "lucide-react";
 import { withBase } from "@/lib/utils";
 
 interface CommandItem {
@@ -26,19 +26,11 @@ export function CommandPalette() {
       category: "Navigation",
     },
     {
-      id: "components",
-      title: "Components",
-      description: "View component library",
+      id: "about",
+      title: "About",
+      description: "About Henzi's Services LLC",
       icon: FileText,
-      action: () => window.location.href = withBase("/components"),
-      category: "Navigation",
-    },
-    {
-      id: "blog",
-      title: "Blog",
-      description: "Read our blog",
-      icon: FileText,
-      action: () => window.location.href = withBase("/blog"),
+      action: () => window.location.href = withBase("/about"),
       category: "Navigation",
     },
     {
@@ -47,22 +39,6 @@ export function CommandPalette() {
       description: "Get in touch",
       icon: Mail,
       action: () => window.location.href = withBase("/contact"),
-      category: "Navigation",
-    },
-    {
-      id: "changelog",
-      title: "Changelog",
-      description: "See what's new",
-      icon: FileText,
-      action: () => window.location.href = withBase("/changelog"),
-      category: "Navigation",
-    },
-    {
-      id: "dashboard",
-      title: "Dashboard",
-      description: "View dashboard demo",
-      icon: Settings,
-      action: () => window.location.href = withBase("/dashboard"),
       category: "Navigation",
     },
   ];
