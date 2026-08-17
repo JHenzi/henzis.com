@@ -5,13 +5,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-// Get the base path from Astro config (e.g., '/astro-genai-startup-theme' or '/')
+// Base path from Astro config. henzis.com is served from the domain root, so this
+// is '/' and withBase() is a passthrough — kept because the upstream theme's
+// components call it throughout, and it costs nothing.
 const BASE_PATH = import.meta.env.BASE_URL || '/';
 
 /**
- * Prepends the base path to a URL for proper routing in GitHub Pages
+ * Prepends the configured base path to a URL.
  * @param path - The path to prepend the base to (e.g., '/components')
- * @returns The full path with base (e.g., '/astro-genai-startup-theme/components')
+ * @returns The full path with base
  */
 export function withBase(path: string): string {
   // Handle hash-only links (e.g., '#features')
