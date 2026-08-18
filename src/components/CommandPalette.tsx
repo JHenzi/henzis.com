@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Search, Home, FileText, Mail, Command } from "lucide-react";
+import { Search, Home, FileText, Command } from "lucide-react";
 import { withBase } from "@/lib/utils";
 
 interface CommandItem {
@@ -31,14 +31,6 @@ export function CommandPalette() {
       description: "About Henzi's Services LLC",
       icon: FileText,
       action: () => window.location.href = withBase("/about"),
-      category: "Navigation",
-    },
-    {
-      id: "contact",
-      title: "Contact",
-      description: "Get in touch",
-      icon: Mail,
-      action: () => window.location.href = withBase("/contact"),
       category: "Navigation",
     },
   ];

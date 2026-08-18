@@ -3,8 +3,8 @@
 **Status:** proposal, not yet implemented
 **Written:** 2026-08-17
 
-`/contact` is linked from two places and doesn't exist. This documents what to build there
-and which form backend to point it at.
+`/contact` doesn't exist. It was linked from two places until 2026-08-17, when both dead
+links were removed. This documents what to build there and which form backend to point it at.
 
 ---
 
@@ -12,11 +12,14 @@ and which form backend to point it at.
 
 | Location | Link | State |
 |---|---|---|
-| [`src/pages/404.astro:68`](../src/pages/404.astro) | `${base}contact` | Dead — links to the 404 page from the 404 page |
-| [`src/components/CommandPalette.tsx:41`](../src/components/CommandPalette.tsx) | `withBase("/contact")` | Dead |
+| `src/pages/404.astro` | `${base}contact` | **Removed 2026-08-17** — was a dead link to the 404 page *from* the 404 page |
+| `src/components/CommandPalette.tsx` | `withBase("/contact")` | **Removed 2026-08-17** — was dead |
 
-There is no `src/pages/contact.astro`. Both links 404 today, live. The site's only working
-contact path is the `henzi.org` link in the footer.
+Both links were deleted rather than left pointing at a missing page. **Nothing on the site
+links to `/contact` now**, so building the page means re-adding them (see §5).
+
+There is no `src/pages/contact.astro`. The site's only working contact path is the
+`henzi.org` link in the footer.
 
 Note that `Header.tsx` does **not** link to contact — the nav is Tools / MLS Writer /
 Pacalaca / VOTE / Pricing / About. So this is a genuine gap, not just a broken link:
@@ -160,7 +163,9 @@ Then wire it up:
 
 - Add `{ label: "Contact", href: withBase("/contact") }` to `navItems` in `Header.tsx` —
   otherwise the page exists but nothing points at it except the 404 page.
-- The existing `404.astro` and `CommandPalette.tsx` links start working with no change.
+- Re-add the Contact entry to `CommandPalette.tsx` (`id: "contact"`, `icon: Mail` — the
+  `Mail` import was dropped when the dead entry was removed, so restore it too).
+- Re-add the Contact link to the helpful-links row in `404.astro`.
 - Add a footer link.
 
 ---

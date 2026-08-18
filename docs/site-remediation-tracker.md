@@ -1,6 +1,6 @@
 # Site Remediation Tracker
 
-**Status:** all P0 resolved 2026-08-17 (uncommitted) — 3 items open
+**Status:** all P0 resolved 2026-08-17 (committed `ef448ce`, `8a30a38`) — 3 items open
 **Opened:** 2026-08-17
 **Scope:** fork residue from `ctrimm/astro-genai-startup-theme` that is live on henzis.com
 and makes false statements under Henzi's Services LLC's name.
@@ -37,7 +37,8 @@ crawlable and submitted for indexing.
 
 ### Resolution — 2026-08-17
 
-Nine files deleted, three edited. **Not yet committed or deployed.**
+Ten files deleted, three edited. Committed as `ef448ce`; docs as `dfc9b8e`.
+**Committed is not deployed** — see the deploy note at the end of this file.
 
 | Deleted | Why |
 |---|---|
@@ -57,13 +58,30 @@ Nine files deleted, three edited. **Not yet committed or deployed.**
 | `src/components/CommandPalette.tsx` | Removed Components/Changelog/Dashboard entries (now dead); added About; dropped the newly-unused `Settings` icon import |
 | `src/pages/404.astro` | `#features` → `#products` — `#features` was a dead anchor; no such id exists on the homepage |
 
-Verified post-build against a clean `dist/`: sitemap is down to `/` and `/about/`, and
-grepping the output for `genai`, `123 AI Street`, `555-123-4567`, `SOC 2`, `users online`,
-`dpo@`, `legal@`, and `privacy@` returns **zero matches**. The site builds 3 pages
-(`/`, `/about/`, `404`).
+Verified post-build against a clean `dist/`: sitemap is down to `/` and `/about/`, and the
+site builds 3 pages (`/`, `/about/`, `404`).
 
-`/contact` is still linked from `404.astro` and `CommandPalette.tsx` and still 404s — left
-deliberately, since P1-4 is about building that page, not removing the links.
+> ⚠️ **The first verification pass was wrong and reported a false all-clear.** Two separate
+> grep traps, both worth knowing about for any future audit of this repo:
+>
+> 1. The sweep used `grep -r ... dist/ | grep -v "_astro"` to skip bundled JS. Astro emits
+>    each page as one long line containing *both* the page text and the `/_astro/…` asset
+>    links, so that filter discarded entire matching lines. Exclude the **directory**
+>    (`--exclude-dir=_astro`), never filter by line content.
+> 2. `dist/index.html` contains a literal NUL byte (offset 16902, inside the VOTE card's
+>    third `<li>`, emitted by the React 18 SSR render — there is no NUL anywhere in `src/`).
+>    `file` classifies it as binary data, so **grep silently skips the homepage entirely**
+>    unless you pass `-a`.
+>
+> Together these hid `404.astro`'s `Page Not Found - GenAI` title through a full "clean"
+> report. Re-verified binary-safe with
+> `grep -rniaEo … dist/ --exclude-dir=_astro`: genuinely clean.
+
+**Follow-up, same day:** two things were missed in the first pass and fixed after review —
+`404.astro:8` still carried the title `Page Not Found - GenAI`, and the dead `/contact`
+links were removed from both `404.astro` and `CommandPalette.tsx` rather than left pointing
+at a page that doesn't exist. `/contact` now has no inbound links anywhere; building it
+means re-adding them (see `contact-form-plan.md` §5).
 
 ---
 
@@ -217,7 +235,8 @@ page. Moot if P1-1 removes the banner.
 ### P1-4 · `/contact` doesn't exist
 - [ ] **Fix**
 
-Linked from `404.astro:68` and `CommandPalette.tsx:41`; no `src/pages/contact.astro`.
+Was linked from `404.astro` and `CommandPalette.tsx`; both links removed 2026-08-17. There
+is still no `src/pages/contact.astro`.
 Fully specced separately in [`contact-form-plan.md`](./contact-form-plan.md).
 
 Coupled to this tracker: the P0 fixes need somewhere to point people. `/contact` is the
